@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETHGuy Clone</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #181818;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #fff;
+            background-color: #0077ff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #232526, #414345);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero .cta {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #0077ff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .hero .cta:hover {
+            background-color: #005bbb;
+        }
+
+        .content {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .cards-section {
+            padding: 50px 20px;
+            background-color: #1e1e1e;
+            text-align: center;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1600px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .card {
+            background-color: #2a2a2a;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: calc(20% - 40px);
+            /* 4 cards per row */
+            min-width: 250px;
+            /* Ensure a minimum size for small screens */
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            /* Subtle hover effect */
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .copy-section {
+            padding: 50px 20px;
+            background-color: #1a73e8;
+            text-align: center;
+            color: #fff;
+        }
+
+        .copy-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .copy-container {
+            display: inline-flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .copy-container span {
+            background-color: #ff5722;
+            color: #fff;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+
+        .copy-container input {
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            outline: none;
+        }
+
+        .copy-container button {
+            border: none;
+            background-color: #0077ff;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .copy-container button:hover {
+            background-color: #005bbb;
+        }
+
+        .about-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Two equal columns */
+            grid-template-rows: auto auto;
+            /* Automatically adjust row height */
+            gap: 20px;
+            /* Space between items */
+            padding: 50px 20px;
+            background-color: #141615;
+            text-align: center;
+        }
+
+        .about-section .row {
+            display: contents;
+            /* Allows direct control of grid children */
+        }
+
+        .about-section .row img,
+        .about-section .row .text {
+            align-self: center;
+            /* Vertically align content */
+            justify-self: center;
+            /* Horizontally align content */
+        }
+
+        .about-section img {
+            width: 50%;
+            /* Ensure images fit their allocated space */
+            max-width: 100%;
+            /* Optional: Rounded corners for images */
+            object-fit: cover;
+            /* Maintain aspect ratio */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: 0.7s;
+        }
+
+        .about-section img:hover {
+           scale: 110%;
+        }
+
+        .about-section .text {
+            color: #ddd;
+            font-size: 18px;
+            padding: 20px;
+            text-align: left;
+            /* Align text to the left */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #181818;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 40px);
+                /* 2 cards per row for tablets */
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+                /* Single column layout on smaller screens */
+            }
+
+            .about-section img {
+                margin-bottom: 20px;
+                /* Add space below images */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+                /* 1 card per row for mobile screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#cards-section">How to Buy</a>
+        </nav>
+    </header>
+    <section class="hero" id="hero">
+        <h1>Welcome to ETHGuy</h1>
+        <p>Your portal to all things Ethereum.</p>
+        <a href="#about" class="cta">Learn More</a>
+    </section>
+    <section class="about-section" id="about">
+        <div class="row">
+            <img src="images/triangle.png" alt="Image 1">
+            <div class="text">
+                <p>ETHGuy is a platform for exploring Ethereum and blockchain technology. Join us to navigate the future
+                    of Web3.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text">
+                <p>Our mission is to make blockchain accessible to everyone, with insights, tools, and a supportive
+                    community.</p>
+            </div>
+            <img src="images/square.png" alt="Image 2">
+        </div>
+        <div class="row">
+            <img src="images/circle.png" alt="Image 2">
+            <div class="text">
+                <p>Our mission is to make blockchain accessible to everyone, with insights, tools, and a supportive
+                    community.</p>
+            </div>
+        </div>
+    </section>
+    <section class="cards-section" id="cards-section">
+        <div class="cards-container">
+            <div class="card">
+                <h3>Card 1</h3>
+                <p>Details about Card 1</p>
+            </div>
+            <div class="card">
+                <h3>Card 2</h3>
+                <p>Details about Card 2</p>
+            </div>
+            <div class="card">
+                <h3>Card 3</h3>
+                <p>Details about Card 3</p>
+            </div>
+            <div class="card">
+                <h3>Card 4</h3>
+                <p>Details about Card 4</p>
+            </div>
+        </div>
+    </section>
+    <section class="copy-section">
+        <h2>Contract Address</h2>
+        <div class="copy-container">
+            <span>CA</span>
+            <input type="text" value="0x00000000DoBe42Ce4354a6745880F5o578ff00" id="contractAddress" readonly>
+            <button onclick="copyToClipboard()">Copy</button>
+        </div>
+    </section>
+    <footer>
+        &copy; 2024 ETHGuy. All rights reserved.
+    </footer>
+    <script>
+        function copyToClipboard() {
+            const copyText = document.getElementById('contractAddress');
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+            navigator.clipboard.writeText(copyText.value)
+                .then(() => alert('Copied to clipboard!'))
+                .catch(() => alert('Failed to copy!'));
+        }
+    </script>
+</body>
+
+</html>
