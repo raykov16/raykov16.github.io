@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETHGuy Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>SquidsOfSol</title>
     <style>
         html {
             scroll-behavior: smooth;
@@ -12,7 +15,7 @@
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: "Oswald", Arial, sans-serif;
             background-color: #0f0f0f;
             color: #fff;
         }
@@ -34,7 +37,7 @@
         }
 
         header nav a {
-            color: #aaa;
+            color: #ffffff;
             text-decoration: none;
             font-size: 18px;
             padding: 10px 20px;
@@ -44,39 +47,58 @@
 
         header nav a:hover {
             color: #fff;
-            background-color: #0077ff;
+            background-color: #f082dd;
         }
 
         .hero {
             text-align: center;
             padding: 100px 20px;
-            background: linear-gradient(135deg, #232526, #414345);
+            background-image: url('images/paralax2.png');
+            /* Replace with correct path */
+            background-size: cover;
+            /* Ensure the image covers the entire section */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Prevent the image from repeating */
+            min-height: 70vh;
+            height: 100%;
+            /* Ensure it takes up the full height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-attachment: fixed;
+            /* Optional: Fix background during scroll */
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
+            font-size: 5rem;
+            margin-bottom: 0.2rem;
+            margin-top: 12rem;
+            text-shadow:
+                2px 2px 3px rgba(0, 0, 0, 1),
+                /* Shadow to the bottom right */
+                -2px -2px 3px rgba(0, 0, 0, 1),
+                /* Shadow to the top left */
+                2px -2px 3px rgba(0, 0, 0, 1),
+                /* Shadow to the top right */
+                -2px 2px 3px rgba(0, 0, 0, 1);
+            /* Shadow to the bottom left */
         }
 
         .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .hero .cta {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #0077ff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        .hero .cta:hover {
-            background-color: #005bbb;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow:
+                2px 2px 3px rgba(0, 0, 0, 1),
+                /* Shadow to the bottom right */
+                -2px -2px 3px rgba(0, 0, 0, 1),
+                /* Shadow to the top left */
+                2px -2px 3px rgba(0, 0, 0, 1),
+                /* Shadow to the top right */
+                -2px 2px 3px rgba(0, 0, 0, 1);
+            /* Shadow to the bottom left */
         }
 
         .content {
@@ -98,7 +120,7 @@
         }
 
         .cards-section {
-            padding: 50px 20px;
+            padding: 0px 0px 7rem 0px;
             background-color: #1e1e1e;
             text-align: center;
         }
@@ -114,8 +136,8 @@
         }
 
         .card {
-            background-color: #2a2a2a;
-            color: #fff;
+            background-color: #e078cf;
+            color: #a72b88;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -133,18 +155,19 @@
         }
 
         .card h3 {
-            font-size: 20px;
+            font-size: 1.5rem;
             margin-bottom: 10px;
         }
 
         .card p {
-            font-size: 16px;
-            color: #ccc;
+            font-size: 1.1rem;
+            color: #ffffff;
+
         }
 
         .copy-section {
             padding: 50px 20px;
-            background-color: #1a73e8;
+            background-color: #1e1e1e;
             text-align: center;
             color: #fff;
         }
@@ -164,32 +187,33 @@
         }
 
         .copy-container span {
-            background-color: #ff5722;
+            background-color: #a72b88;
             color: #fff;
-            padding: 10px 20px;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
             font-weight: bold;
         }
 
         .copy-container input {
             border: none;
-            padding: 10px;
-            font-size: 16px;
+            font-size: 1rem;
             width: 300px;
             outline: none;
         }
 
         .copy-container button {
             border: none;
-            background-color: #0077ff;
+            background-color: #f082dd;
             color: #fff;
-            padding: 10px 20px;
+            padding: 0.8rem 1rem;
             cursor: pointer;
-            font-size: 16px;
+            font-weight: bold;
+            font-size: 1.3rem;
             transition: background-color 0.3s;
         }
 
         .copy-container button:hover {
-            background-color: #005bbb;
+            background-color: #a72b88;
         }
 
         .about-section {
@@ -200,8 +224,8 @@
             /* Automatically adjust row height */
             gap: 20px;
             /* Space between items */
-            padding: 50px 20px;
-            background-color: #141615;
+            padding: 0px 0px 50px 0px;
+            background-color: #111312;
             text-align: center;
         }
 
@@ -231,22 +255,48 @@
         }
 
         .about-section img:hover {
-           scale: 110%;
+            scale: 110%;
         }
 
         .about-section .text {
             color: #ddd;
-            font-size: 18px;
-            padding: 20px;
-            text-align: left;
+            font-size: 1.5rem;
+            padding: 10%;
+            text-align: center;
             /* Align text to the left */
         }
+
+        .about-section h2 {
+            grid-column: span 2;
+            font-size: 5rem;
+            color: #ffffff;
+            text-align: center;
+            background-color: #f082dd;
+            margin-top: 0px;
+            padding: 20px 0px 20px 0px;
+        }
+
+        .about-section .bonus {
+            grid-column: span 2;
+            color: #ffffff;
+            padding: 2rem;
+        }
+
+        .cards-section h2 {
+            font-size: 5rem;
+            color: #ffffff;
+            text-align: center;
+            background-color: #f082dd;
+            margin-top: 0px;
+            padding: 20px 0px 20px 0px;
+        }
+
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #181818;
-            color: #aaa;
+            background-color: #640477;
+            color: #f7f7f7;
         }
 
         @media (max-width: 768px) {
@@ -280,54 +330,66 @@
         <nav>
             <a href="#hero">Home</a>
             <a href="#about">About</a>
-            <a href="#cards-section">How to Buy</a>
+            <a href="#cards-section">How to participate</a>
         </nav>
     </header>
     <section class="hero" id="hero">
-        <h1>Welcome to ETHGuy</h1>
-        <p>Your portal to all things Ethereum.</p>
-        <a href="#about" class="cta">Learn More</a>
+        <h1>Squids of Solana</h1>
+        <p>Take part in the movement against rug pulls</p>
     </section>
     <section class="about-section" id="about">
+        <h2>About Squids</h2>
         <div class="row">
-            <img src="images/triangle.png" alt="Image 1">
+            <img src="images/square.png" alt="Image 2">
             <div class="text">
-                <p>ETHGuy is a platform for exploring Ethereum and blockchain technology. Join us to navigate the future
-                    of Web3.</p>
+                <p>At the top of the hierarchy are the square squids, who act as supervisors. They oversee the circles
+                    and triangles, giving them instructions and making sure everything runs smoothly. Squares also
+                    communicate directly with the Front Man, handling any issues that require leadership and
+                    coordination.</p>
             </div>
         </div>
         <div class="row">
             <div class="text">
-                <p>Our mission is to make blockchain accessible to everyone, with insights, tools, and a supportive
-                    community.</p>
+                <p>The triangle squids have a more active role during the games. Armed with weapons, they are the
+                    enforcers who maintain order and deal with any disobedience swiftly. They’re essentially the muscle
+                    of the operation, ensuring everything stays under control.</p>
             </div>
-            <img src="images/square.png" alt="Image 2">
+            <img src="images/triangle.png" alt="Image 1">
         </div>
         <div class="row">
             <img src="images/circle.png" alt="Image 2">
             <div class="text">
-                <p>Our mission is to make blockchain accessible to everyone, with insights, tools, and a supportive
-                    community.</p>
+                <p>The circle squids are the lowest rank among the pink-hooded enforcers. They handle all the basic
+                    tasks, like cleaning the game areas, distributing food, and moving players around. They don’t carry
+                    weapons and have no authority, working strictly under orders from those above them.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text bonus">
+                <p>The crypto currencies community has turned into a PVP world. Instead of helping and introducing new
+                    people to crypto in a way that they see it's power, rug pulls and scams hunt behind every corner.
+                    This community is a symbol and a movement against the current scam narative. Take part and be the change!</p>
             </div>
         </div>
     </section>
     <section class="cards-section" id="cards-section">
+        <h2>How to participate</h2>
         <div class="cards-container">
             <div class="card">
-                <h3>Card 1</h3>
-                <p>Details about Card 1</p>
+                <h3>Create wallet</h3>
+                <p>We suggest starting with a Phantom wallet</p>
             </div>
             <div class="card">
-                <h3>Card 2</h3>
-                <p>Details about Card 2</p>
+                <h3>Get Solana</h3>
+                <p>Transfer Solana to your newly created wallet</p>
             </div>
             <div class="card">
-                <h3>Card 3</h3>
-                <p>Details about Card 3</p>
+                <h3>Swap tokens</h3>
+                <p>Copy the CA below, paste it in Phantom and swap Solana for Squids tokens</p>
             </div>
             <div class="card">
-                <h3>Card 4</h3>
-                <p>Details about Card 4</p>
+                <h3>Success</h3>
+                <p>Now you are part of our community, enjoy</p>
             </div>
         </div>
     </section>
@@ -335,12 +397,12 @@
         <h2>Contract Address</h2>
         <div class="copy-container">
             <span>CA</span>
-            <input type="text" value="0x00000000DoBe42Ce4354a6745880F5o578ff00" id="contractAddress" readonly>
+            <input type="text" value="TO BE ANOUNNCED" id="contractAddress" readonly>
             <button onclick="copyToClipboard()">Copy</button>
         </div>
     </section>
     <footer>
-        &copy; 2024 ETHGuy. All rights reserved.
+        &copy; 2025 Squids Of Sol. All rights reserved.
     </footer>
     <script>
         function copyToClipboard() {
