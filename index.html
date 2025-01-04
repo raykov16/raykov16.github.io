@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>SquidsOfSol</title>
     <style>
         html {
@@ -48,6 +49,26 @@
         header nav a:hover {
             color: #fff;
             background-color: #f082dd;
+        }
+
+        /* Social icons container */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            /* Adjust the size of the icons */
+            text-decoration: none;
+            transition: color 0.3s;
+            margin-left: 1rem;
+        }
+
+        .social-icons a:hover {
+            color: #f082dd;
+            /* Hover effect for icons */
         }
 
         .hero {
@@ -332,6 +353,14 @@
             <a href="#about">About</a>
             <a href="#cards-section">How to participate</a>
         </nav>
+        <div class="social-icons">
+            <a href="https://x.com/Squids_of_sol" target="_blank" class="icon-link">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://t.me/SquidUFOs" target="_blank" class="icon-link">
+                <i class="fab fa-telegram"></i> 
+            </a>
+        </div>
     </header>
     <section class="hero" id="hero">
         <h1>Squids of Solana</h1>
@@ -368,7 +397,8 @@
             <div class="text bonus">
                 <p>The crypto currencies community has turned into a PVP world. Instead of helping and introducing new
                     people to crypto in a way that they see it's power, rug pulls and scams hunt behind every corner.
-                    This community is a symbol and a movement against the current scam narative. Take part and be the change!</p>
+                    This community is a symbol and a movement against the current scam narative. Take part and be the
+                    change!</p>
             </div>
         </div>
     </section>
