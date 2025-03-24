@@ -48,7 +48,7 @@
 
         header nav a:hover {
             color: #fff;
-            background-color: #f082dd;
+            background-color: #0bcdfd;
         }
 
         /* Social icons container */
@@ -67,14 +67,14 @@
         }
 
         .social-icons a:hover {
-            color: #f082dd;
+            color: #0bcdfd;
             /* Hover effect for icons */
         }
 
         .hero {
             text-align: center;
             padding: 100px 20px;
-            background-image: url('images/paralax2.png');
+            background-image: url('images/Buidl.png');
             /* Replace with correct path */
             background-size: cover;
             /* Ensure the image covers the entire section */
@@ -140,13 +140,13 @@
             color: #ddd;
         }
 
-        .cards-section {
+        .partners-section {
             padding: 0px 0px 7rem 0px;
             background-color: #1e1e1e;
             text-align: center;
         }
 
-        .cards-container {
+        .partners-container {
             display: flex;
             justify-content: space-evenly;
             gap: 20px;
@@ -157,13 +157,13 @@
         }
 
         .card {
-            background-color: #e078cf;
-            color: #a72b88;
+            background-color: #14d5f7;
+            color: #056070;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: calc(20% - 40px);
-            /* 4 cards per row */
+            /* 4 partners per row */
             min-width: 250px;
             /* Ensure a minimum size for small screens */
             text-align: center;
@@ -186,58 +186,7 @@
 
         }
 
-        .copy-section {
-            padding: 50px 20px;
-            background-color: #1e1e1e;
-            text-align: center;
-            color: #fff;
-        }
-
-        .copy-section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .copy-container {
-            display: inline-flex;
-            align-items: center;
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .copy-container span {
-            background-color: #a72b88;
-            color: #fff;
-            padding: 0.8rem 1rem;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        .copy-container input {
-            border: none;
-            font-size: 1rem;
-            width: 300px;
-            outline: none;
-        }
-
-        .copy-container button {
-            border: none;
-            background-color: #f082dd;
-            color: #fff;
-            padding: 0.8rem 1rem;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1.3rem;
-            transition: background-color 0.3s;
-        }
-
-        .copy-container button:hover {
-            background-color: #a72b88;
-        }
-
-        .about-section {
+        .services-section {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             /* Two equal columns */
@@ -250,20 +199,20 @@
             text-align: center;
         }
 
-        .about-section .row {
+        .services-section .row {
             display: contents;
             /* Allows direct control of grid children */
         }
 
-        .about-section .row img,
-        .about-section .row .text {
+        .services-section .row img,
+        .services-section .row .text {
             align-self: center;
             /* Vertically align content */
             justify-self: center;
             /* Horizontally align content */
         }
 
-        .about-section img {
+        .services-section img {
             width: 50%;
             /* Ensure images fit their allocated space */
             max-width: 100%;
@@ -275,11 +224,11 @@
             transition: 0.7s;
         }
 
-        .about-section img:hover {
+        .services-section img:hover {
             scale: 110%;
         }
 
-        .about-section .text {
+        .services-section .text {
             color: #ddd;
             font-size: 1.5rem;
             padding: 10%;
@@ -287,27 +236,27 @@
             /* Align text to the left */
         }
 
-        .about-section h2 {
+        .services-section h2 {
             grid-column: span 2;
             font-size: 5rem;
             color: #ffffff;
             text-align: center;
-            background-color: #f082dd;
+            background-color: #029edb;
             margin-top: 0px;
             padding: 20px 0px 20px 0px;
         }
 
-        .about-section .bonus {
+        .services-section .bonus {
             grid-column: span 2;
             color: #ffffff;
             padding: 2rem;
         }
 
-        .cards-section h2 {
+        .partners-section h2 {
             font-size: 5rem;
             color: #ffffff;
             text-align: center;
-            background-color: #f082dd;
+            background-color: #029edb;
             margin-top: 0px;
             padding: 20px 0px 20px 0px;
         }
@@ -316,22 +265,22 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #640477;
+            background-color: #055e81;
             color: #f7f7f7;
         }
 
         @media (max-width: 768px) {
             .card {
                 width: calc(50% - 40px);
-                /* 2 cards per row for tablets */
+                /* 2 partners per row for tablets */
             }
 
-            .about-section {
+            .services-section {
                 grid-template-columns: 1fr;
                 /* Single column layout on smaller screens */
             }
 
-            .about-section img {
+            .services-section img {
                 margin-bottom: 20px;
                 /* Add space below images */
             }
@@ -350,100 +299,82 @@
     <header>
         <nav>
             <a href="#hero">Home</a>
-            <a href="#about">About</a>
-            <a href="#cards-section">How to participate</a>
+            <a href="#services">Services</a>
+            <a href="#partners-section">Partners</a>
         </nav>
         <div class="social-icons">
-            <a href="https://x.com/Squids_of_sol" target="_blank" class="icon-link">
+            <a href="" target="_blank" class="icon-link">
                 <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://t.me/SquidUFOs" target="_blank" class="icon-link">
-                <i class="fab fa-telegram"></i> 
+            <a href="" target="_blank" class="icon-link">
+                <i class="fab fa-telegram"></i>
             </a>
         </div>
     </header>
     <section class="hero" id="hero">
-        <h1>Squids of Solana</h1>
-        <p>Take part in the movement against rug pulls</p>
     </section>
-    <section class="about-section" id="about">
-        <h2>About Squids</h2>
+    <section class="services-section" id="services">
+        <h2>Services</h2>
         <div class="row">
-            <img src="images/square.png" alt="Image 2">
+            <img src="images/charts.png" alt="Image 2">
             <div class="text">
-                <p>At the top of the hierarchy are the square squids, who act as supervisors. They oversee the circles
-                    and triangles, giving them instructions and making sure everything runs smoothly. Squares also
-                    communicate directly with the Front Man, handling any issues that require leadership and
-                    coordination.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita laborum labore impedit laudantium
+                    optio debitis, repudiandae quae sunt cum ut illum doloremque cupiditate consectetur nobis excepturi
+                    saepe nostrum rerum facilis?</p>
             </div>
         </div>
         <div class="row">
             <div class="text">
-                <p>The triangle squids have a more active role during the games. Armed with weapons, they are the
-                    enforcers who maintain order and deal with any disobedience swiftly. They’re essentially the muscle
-                    of the operation, ensuring everything stays under control.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita laborum labore impedit laudantium
+                    optio debitis, repudiandae quae sunt cum ut illum doloremque cupiditate consectetur nobis excepturi
+                    saepe nostrum rerum facilis?</p>
             </div>
-            <img src="images/triangle.png" alt="Image 1">
+            <img src="images/ai.png" alt="Image 1">
         </div>
         <div class="row">
-            <img src="images/circle.png" alt="Image 2">
+            <img src="images/ob.png" alt="Image 2">
             <div class="text">
-                <p>The circle squids are the lowest rank among the pink-hooded enforcers. They handle all the basic
-                    tasks, like cleaning the game areas, distributing food, and moving players around. They don’t carry
-                    weapons and have no authority, working strictly under orders from those above them.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita laborum labore impedit laudantium
+                    optio debitis, repudiandae quae sunt cum ut illum doloremque cupiditate consectetur nobis excepturi
+                    saepe nostrum rerum facilis?</p>
             </div>
         </div>
         <div class="row">
             <div class="text bonus">
-                <p>The crypto currencies community has turned into a PVP world. Instead of helping and introducing new
-                    people to crypto in a way that they see it's power, rug pulls and scams hunt behind every corner.
-                    This community is a symbol and a movement against the current scam narative. Take part and be the
-                    change!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolor itaque architecto maxime
+                    maiores? Porro, vero. Nulla voluptate cum ab minus nemo? Fugiat veritatis reiciendis nisi nobis
+                    magnam aspernatur ullam.</p>
             </div>
         </div>
     </section>
-    <section class="cards-section" id="cards-section">
-        <h2>How to participate</h2>
-        <div class="cards-container">
+    <section class="partners-section" id="partners-section">
+        <h2>Partners</h2>
+        <div class="partners-container">
             <div class="card">
-                <h3>Create wallet</h3>
-                <p>We suggest starting with a Phantom wallet</p>
+                <h3>Synfutures</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolor itaque architecto maxime
+                    maiores? Porro, vero. Nulla voluptate cum ab minus nemo? </p>
             </div>
             <div class="card">
-                <h3>Get Solana</h3>
-                <p>Transfer Solana to your newly created wallet</p>
+                <h3>Bybit</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolor itaque architecto maxime
+                    maiores? Porro, vero. Nulla voluptate cum ab minus nemo? </p>
             </div>
             <div class="card">
-                <h3>Swap tokens</h3>
-                <p>Copy the CA below, paste it in Phantom and swap Solana for Squids tokens</p>
+                <h3>Partner 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolor itaque architecto maxime
+                    maiores? Porro, vero. Nulla voluptate cum ab minus nemo? </p>
             </div>
             <div class="card">
-                <h3>Success</h3>
-                <p>Now you are part of our community, enjoy</p>
+                <h3>Partner 4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolor itaque architecto maxime
+                    maiores? Porro, vero. Nulla voluptate cum ab minus nemo? </p>
             </div>
-        </div>
-    </section>
-    <section class="copy-section">
-        <h2>Contract Address</h2>
-        <div class="copy-container">
-            <span>CA</span>
-            <input type="text" value="TO BE ANOUNNCED" id="contractAddress" readonly>
-            <button onclick="copyToClipboard()">Copy</button>
         </div>
     </section>
     <footer>
-        &copy; 2025 Squids Of Sol. All rights reserved.
+        &copy; Buidl Limited since 2024. All rights reserved.
     </footer>
-    <script>
-        function copyToClipboard() {
-            const copyText = document.getElementById('contractAddress');
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); // For mobile devices
-            navigator.clipboard.writeText(copyText.value)
-                .then(() => alert('Copied to clipboard!'))
-                .catch(() => alert('Failed to copy!'));
-        }
-    </script>
 </body>
 
 </html>
