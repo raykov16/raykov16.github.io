@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
                 } ${activeSection === item.href.substring(1) ? 'text-corporate-gold' : ''}`}
             >
               {item.label}
-              <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-[#D4AF37] transform transition-transform duration-300 ${activeSection === item.href.substring(1)
+              <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-black transform transition-transform duration-300 ${activeSection === item.href.substring(1)
                 ? 'scale-x-100 origin-left'
                 : 'scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left'
                 }`}></span>
