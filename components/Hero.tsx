@@ -5,7 +5,7 @@ import logoWhite from '../images/logo-metalstroi-white.png';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section id="home" className="relative h-screen overflow-hidden">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"

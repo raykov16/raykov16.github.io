@@ -3,17 +3,18 @@ import { NavItem } from '../types';
 import { Menu, X } from 'lucide-react';
 
 const navItems: NavItem[] = [
-  { label: 'ЗА НАС', href: '#about-us' },
+  { label: 'НАЧАЛО', href: '#home' },
   { label: 'ПРОДУКЦИЯ', href: '#services' },
   { label: 'ОБЕКТИ', href: '#constructions' },
   { label: 'СЕРТИФИКАТИ', href: '#certificates' },
   { label: 'КОНТАКТИ', href: '#contact' },
-  { label: 'ЗАПИТВАНЕ', href: '#contact' },
+  { label: 'ЗА НАС', href: '#about-us' },
 ];
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,29 @@ export const Navbar: React.FC = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-50% 0px -50% 0px', // Trigger when section is in the middle of viewport
+        threshold: 0
+      }
+    );
+
+    navItems.forEach((item) => {
+      const element = document.getElementById(item.href.substring(1));
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -40,10 +64,14 @@ export const Navbar: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
-              className={`text-xs font-medium uppercase tracking-widest hover:text-corporate-gold transition-colors ${isScrolled ? 'text-gray-800' : 'text-white/90'
-                }`}
+              className={`text-xs font-medium uppercase tracking-widest hover:text-corporate-gold transition-colors relative group ${isScrolled ? 'text-gray-800' : 'text-white/90'
+                } ${activeSection === item.href.substring(1) ? 'text-corporate-gold' : ''}`}
             >
               {item.label}
+              <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-[#D4AF37] transform transition-transform duration-300 ${activeSection === item.href.substring(1)
+                ? 'scale-x-100 origin-left'
+                : 'scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left'
+                }`}></span>
             </a>
           ))}
         </div>
