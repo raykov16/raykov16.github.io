@@ -3,6 +3,7 @@ import { NavItem } from '../types';
 import { Menu, X } from 'lucide-react';
 
 const navItems: NavItem[] = [
+  { label: 'ЗА НАС', href: '#about-us' },
   { label: 'ПРОДУКЦИЯ', href: '#services' },
   { label: 'ОБЕКТИ', href: '#constructions' },
   { label: 'СЕРТИФИКАТИ', href: '#certificates' },

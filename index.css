@@ -27,9 +27,9 @@
     }
 
     .btn-secondary-white:hover {
-        background-color: transparent;
+        background-color: black;
         color: white;
-        border-color: white;
+        border-color: black;
     }
 
     .section-header-divider {
