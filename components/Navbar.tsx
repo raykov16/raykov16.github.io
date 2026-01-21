@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 group/nav">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -70,7 +70,7 @@ export const Navbar: React.FC = () => {
               {item.label}
               <span className={`absolute -bottom-2 left-0 w-full h-0.5 transform transition-transform duration-300 ${isScrolled ? 'bg-black' : 'bg-white'
                 } ${activeSection === item.href.substring(1)
-                  ? 'scale-x-100 origin-left'
+                  ? 'scale-x-100 origin-left group-hover/nav:scale-x-0 group-hover/nav:origin-right group-hover:!scale-x-100 group-hover:!origin-left'
                   : 'scale-x-0 origin-right group-hover:scale-x-100 group-hover:origin-left'
                 }`}></span>
             </a>
