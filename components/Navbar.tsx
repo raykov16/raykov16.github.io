@@ -64,8 +64,8 @@ export const Navbar: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
-              className={`text-xs font-medium uppercase tracking-widest hover:text-corporate-gold transition-colors relative group ${isScrolled ? 'text-gray-800' : 'text-white/90'
-                } ${activeSection === item.href.substring(1) ? 'text-corporate-gold' : ''}`}
+              className={`text-xs font-medium uppercase tracking-widest transition-colors relative group ${isScrolled ? 'text-black' : 'text-white'
+                }`}
             >
               {item.label}
               <span className={`absolute -bottom-2 left-0 w-full h-0.5 transform transition-transform duration-300 ${isScrolled ? 'bg-black' : 'bg-white'
