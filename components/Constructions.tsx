@@ -22,12 +22,12 @@ const constructions: ConstructionClient[] = [
 
 export const Constructions: React.FC = () => {
     return (
-        <section id="constructions" className="py-24 bg-white">
+        <section id="constructions" className="py-24 bg-gray-50">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="mb-20 text-center">
-                    <span className="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2 block">Обекти</span>
-                    <h2 className="text-4xl font-serif text-corporate-dark">Над 100 доволни клиенти</h2>
-                    <div className="w-16 h-1 bg-red-600 mb-4 mx-auto mt-8"></div>
+                    <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2 block">Обекти</h2>
+                    <span className="text-4xl font-serif text-corporate-dark">Над 100 доволни клиенти</span>
+                    <div className="section-header-divider"></div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

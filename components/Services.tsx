@@ -58,9 +58,9 @@ export const Services: React.FC = () => {
     <section id="services" className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="mb-20 text-center">
-          <span className="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2 block">ПРОДУКЦИЯ</span>
-          <h2 className="text-4xl font-serif text-corporate-dark">Нашите услуги</h2>
-          <div className="w-16 h-1 bg-red-600 mb-4 mx-auto mt-8"></div>
+          <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2 block">ПРОДУКЦИЯ</h2>
+          <span className="text-4xl font-serif text-corporate-dark">Нашите услуги</span>
+          <div className="section-header-divider"></div>
         </div>
 
         <div className="space-y-24">

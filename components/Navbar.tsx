@@ -5,11 +5,9 @@ import { Menu, X } from 'lucide-react';
 const navItems: NavItem[] = [
   { label: 'ПРОДУКЦИЯ', href: '#services' },
   { label: 'ОБЕКТИ', href: '#constructions' },
-  { label: 'ЗАПИТВАНЕ', href: '#contact' },
-  { label: 'КОНТАКТИ', href: '#contact' },
-  { label: 'ЗА НАС', href: '#about-us' },
   { label: 'СЕРТИФИКАТИ', href: '#certificates' },
-  { label: 'EU ПРОГРАМИ', href: '#eu-programs' },
+  { label: 'КОНТАКТИ', href: '#contact' },
+  { label: 'ЗАПИТВАНЕ', href: '#contact' },
 ];
 
 export const Navbar: React.FC = () => {
