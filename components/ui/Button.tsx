@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'outline' | 'white';
+  variant?: 'primary' | 'secondary-dark' | 'secondary-white';
   href?: string;
 }
 
@@ -15,9 +15,9 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = "px-8 py-3 text-sm font-medium tracking-widest uppercase transition-all duration-300 ease-in-out border inline-block text-center";
 
   const variants = {
-    primary: "border-corporate-dark bg-corporate-dark text-white hover:bg-transparent hover:text-corporate-dark",
-    outline: "border-corporate-dark text-corporate-dark hover:bg-corporate-dark hover:text-white",
-    white: "border-white text-white hover:bg-white hover:text-corporate-dark"
+    primary: "btn-primary",
+    "secondary-dark": "btn-secondary-dark",
+    "secondary-white": "btn-secondary-white" // Replaces outline/white logic with specific class
   };
 
   if (href) {

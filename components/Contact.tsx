@@ -33,6 +33,7 @@ export const Contact: React.FC = () => {
           </div>
 
           <div className="bg-white/5 p-8 md:p-12 border border-white/10">
+            <h3 className="text-3xl font-serif text-center text-white mb-12">Направи запитване</h3>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -53,7 +54,7 @@ export const Contact: React.FC = () => {
                 <textarea rows={4} className="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-corporate-gold transition-colors resize-none"></textarea>
               </div>
               <div className="pt-4">
-                <Button variant="white" className="w-full md:w-auto">ЗАПИТВАНЕ</Button>
+                <Button variant="primary" className="w-full md:w-auto">ИЗПРАТИ</Button>
               </div>
             </form>
           </div>

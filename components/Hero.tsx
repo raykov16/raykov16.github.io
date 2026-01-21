@@ -27,8 +27,8 @@ export const Hero: React.FC = () => {
             Производство и монтаж на метални конструкции
           </h1>
           <div className="flex flex-col md:flex-row justify-start gap-4">
-            <Button variant="white" href="#constructions">ОБЕКТИ</Button>
-            <Button variant="white" href="#contact" className="!bg-white !text-black hover:!bg-transparent hover:!text-white">ЗАПИТВАНЕ</Button>
+            <Button variant="primary" href="#contact">ЗАПИТВАНЕ</Button>
+            <Button variant="secondary-dark" href="#constructions">ОБЕКТИ</Button>
           </div>
         </div>
       </div>

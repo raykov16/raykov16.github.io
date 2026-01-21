@@ -48,7 +48,7 @@ export const Constructions: React.FC = () => {
                 </div>
 
                 <div className="mt-16 text-center">
-                    <Button variant="outline" className="border-gray-300 text-gray-500 hover:border-corporate-dark hover:text-corporate-dark">
+                    <Button variant="secondary-white">
                         Разгледай още обекти
                     </Button>
                 </div>
