@@ -2,6 +2,16 @@ import React from 'react';
 import { Button } from './ui/Button';
 
 export const Contact: React.FC = () => {
+  /* Step 1: Add necessary hooks */
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
+  const [selectedFiles, setSelectedFiles] = React.useState<File[]>([]);
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setSelectedFiles(Array.from(e.target.files));
+    }
+  };
+
   return (
     <footer id="contact" className="bg-corporate-dark text-white py-24">
       <div className="container mx-auto px-6 md:px-12">
@@ -66,8 +76,27 @@ export const Contact: React.FC = () => {
               <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Съобщение</label>
               <textarea rows={4} className="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-corporate-gold transition-colors resize-none"></textarea>
             </div>
-            <div className="pt-4">
+            <div className="pt-4 flex items-center gap-4">
+              <Button
+                type="button"
+                variant="secondary-dark"
+                onClick={() => fileInputRef.current?.click()}
+                className="py-2 px-6 text-xs"
+              >
+                Прикачи файлове
+              </Button>
+              <span className="text-sm text-gray-400">
+                {selectedFiles.length > 0 ? `${selectedFiles.length} файл(а)` : ''}
+              </span>
               <Button variant="primary" className="w-full md:w-auto">ИЗПРАТИ</Button>
+              <input
+                type="file"
+                multiple
+                ref={fileInputRef}
+                onChange={handleFileChange}
+                accept=".png, .jpg, .jpeg, .pdf"
+                className="hidden"
+              />
             </div>
           </form>
         </div>
