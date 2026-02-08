@@ -35,6 +35,24 @@ const certificates: Certificate[] = [
     },
 ];
 
+const euroPrograms: Certificate[] = [
+    {
+        code: "EURO-PROG-001",
+        label: "ЕВРОПЕЙСКА ПРОГРАМА",
+        image: "../images/euro-flag.png" // Placeholder image for now, as specific ones aren't provided
+    },
+    {
+        code: "EURO-PROG-002",
+        label: "ЕВРОПЕЙСКА ПРОГРАМА",
+        image: "../images/euro-flag.png"
+    },
+    {
+        code: "EURO-PROG-003",
+        label: "ЕВРОПЕЙСКА ПРОГРАМА",
+        image: "../images/euro-flag.png"
+    },
+];
+
 export const Certificates: React.FC = () => {
     const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
 
@@ -70,6 +88,25 @@ export const Certificates: React.FC = () => {
                             <div>
                                 <p className="text-[10px] font-bold tracking-[0.15em] text-gray-400 uppercase mb-1">{cert.label}</p>
                                 <h3 className="text-2xl font-bold text-corporate-dark">{cert.code}</h3>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-12">
+                    {euroPrograms.map((prog, idx) => (
+                        <div
+                            key={idx}
+                            onClick={() => openCertificate(prog)}
+                            className="bg-white rounded-2xl p-6 flex items-center shadow-sm hover:shadow-md transition-shadow border border-gray-100 cursor-pointer"
+                        >
+                            <div className="flex-shrink-0 mr-6">
+                                <div className="w-16 h-16 bg-[#003399] rounded-2xl flex items-center justify-center text-corporate-dark overflow-hidden">
+                                    <img src="../images/euro-flag.png" alt="European Program" className="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                            <div>
+                                <p className="text-[10px] font-bold tracking-[0.15em] text-gray-400 uppercase mb-1">{prog.label}</p>
+                                <h3 className="text-2xl font-bold text-corporate-dark">{prog.code}</h3>
                             </div>
                         </div>
                     ))}
