@@ -7,6 +7,10 @@ interface Certificate {
     image: string;
 }
 
+interface EuroProgram extends Certificate {
+    description: string;
+}
+
 const certificates: Certificate[] = [
     {
         code: "ISO 3834-2",
@@ -35,26 +39,30 @@ const certificates: Certificate[] = [
     },
 ];
 
-const euroPrograms: Certificate[] = [
+const euroPrograms: EuroProgram[] = [
     {
         code: "EURO-PROG-001",
         label: "ЕВРОПЕЙСКА ПРОГРАМА",
-        image: "../images/euro-flag.png" // Placeholder image for now, as specific ones aren't provided
+        image: "../images/euro-flag.png", // Placeholder image for now, as specific ones aren't provided
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
         code: "EURO-PROG-002",
         label: "ЕВРОПЕЙСКА ПРОГРАМА",
-        image: "../images/euro-flag.png"
+        image: "../images/euro-flag.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in odio ac ipsum accumsan tempor. Vivamus vel quam pellentesque, sagittis mi quis, tempor arcu. Praesent varius sit amet justo a egestas. Morbi id ligula nec nunc congue laoreet. Maecenas scelerisque, felis at aliquet consectetur, purus quam elementum magna, vel posuere tortor eros sed ante."
     },
     {
         code: "EURO-PROG-003",
         label: "ЕВРОПЕЙСКА ПРОГРАМА",
-        image: "../images/euro-flag.png"
+        image: "../images/euro-flag.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Phasellus vulputate, nunc vel lacinia fringilla, purus dui pharetra magna, eget ullamcorper massa justo sed tortor. Curabitur vitae erat at velit consequat tristique. Nullam placerat venenatis augue eu condimentum. Aenean in metus ut ante rutrum scelerisque nec sed mi. Fusce ullamcorper interdum dui, vitae ultricies dolor semper sed."
     },
 ];
 
 export const Certificates: React.FC = () => {
     const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
+    const [selectedEuroProgram, setSelectedEuroProgram] = useState<EuroProgram | null>(null);
 
     const openCertificate = (cert: Certificate) => {
         setSelectedCertificate(cert);
@@ -62,6 +70,14 @@ export const Certificates: React.FC = () => {
 
     const closeCertificate = () => {
         setSelectedCertificate(null);
+    };
+
+    const openEuroProgram = (prog: EuroProgram) => {
+        setSelectedEuroProgram(prog);
+    };
+
+    const closeEuroProgram = () => {
+        setSelectedEuroProgram(null);
     };
 
     return (
@@ -96,7 +112,7 @@ export const Certificates: React.FC = () => {
                     {euroPrograms.map((prog, idx) => (
                         <div
                             key={idx}
-                            onClick={() => openCertificate(prog)}
+                            onClick={() => openEuroProgram(prog)}
                             className="bg-white rounded-2xl p-6 flex items-center shadow-sm hover:shadow-md transition-shadow border border-gray-100 cursor-pointer"
                         >
                             <div className="flex-shrink-0 mr-6">
@@ -132,6 +148,29 @@ export const Certificates: React.FC = () => {
                             className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl bg-white"
                             onClick={(e) => e.stopPropagation()}
                         />
+                    </div>
+                </div>
+            )}
+
+            {/* Euro Program Modal */}
+            {selectedEuroProgram && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 z-[60]"
+                    onClick={closeEuroProgram}
+                >
+                    <div className="relative max-w-2xl w-full max-h-[80vh] bg-white rounded-lg shadow-2xl p-8 flex flex-col" onClick={(e) => e.stopPropagation()}>
+                        <button
+                            onClick={closeEuroProgram}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors bg-gray-100 rounded-full p-1"
+                        >
+                            <X size={24} />
+                        </button>
+                        <h3 className="text-2xl font-bold text-corporate-dark mb-4">{selectedEuroProgram.code}</h3>
+                        <div className="overflow-y-auto pr-2 custom-scrollbar">
+                            <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+                                {selectedEuroProgram.description}
+                            </p>
+                        </div>
                     </div>
                 </div>
             )}
