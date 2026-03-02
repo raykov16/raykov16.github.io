@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ConstructionClient } from '../types';
 import { Button } from './ui/Button';
 
@@ -20,7 +20,40 @@ const constructions: ConstructionClient[] = [
     }
 ];
 
+const moreConstructions: ConstructionClient[] = [
+    ...constructions,
+    ...constructions,
+    ...constructions
+];
+
+const ConstructionCard: React.FC<{ client: ConstructionClient }> = ({ client }) => (
+    <div className="group cursor-pointer">
+        <div className="overflow-hidden mb-6 relative">
+            <div className="absolute inset-0 bg-corporate-dark/10 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
+            <img
+                src={client.image}
+                alt={client.name}
+                className="w-full h-[400px] object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+        </div>
+        <h3 className="text-2xl font-serif text-corporate-dark">{client.name}</h3>
+        <p className="text-sm uppercase tracking-widest text-corporate-gold mt-1">{client.role}</p>
+    </div>
+);
+
 export const Constructions: React.FC = () => {
+    const [showMore, setShowMore] = useState(false);
+
+    const handleToggle = () => {
+        if (showMore) {
+            const section = document.getElementById('constructions');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        setShowMore(!showMore);
+    };
+
     return (
         <section id="constructions" className="py-24 bg-gray-50">
             <div className="container mx-auto px-6 md:px-12">
@@ -32,24 +65,24 @@ export const Constructions: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {constructions.map((client, idx) => (
-                        <div key={idx} className="group cursor-pointer">
-                            <div className="overflow-hidden mb-6 relative">
-                                <div className="absolute inset-0 bg-corporate-dark/10 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
-                                <img
-                                    src={client.image}
-                                    alt={client.name}
-                                    className="w-full h-[400px] object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                                />
-                            </div>
-                            <h3 className="text-2xl font-serif text-corporate-dark">{client.name}</h3>
-                            <p className="text-sm uppercase tracking-widest text-corporate-gold mt-1">{client.role}</p>
-                        </div>
+                        <ConstructionCard key={`initial-${idx}`} client={client} />
                     ))}
                 </div>
 
+                <div
+                    className={`transition-all duration-1000 ease-in-out overflow-hidden ${showMore ? 'max-h-[5000px] opacity-100 mt-10' : 'max-h-0 opacity-0 mt-0 pointer-events-none'
+                        }`}
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        {moreConstructions.map((client, idx) => (
+                            <ConstructionCard key={`more-${idx}`} client={client} />
+                        ))}
+                    </div>
+                </div>
+
                 <div className="mt-16 text-center">
-                    <Button variant="secondary-white">
-                        Разгледай още обекти
+                    <Button variant="secondary-white" onClick={handleToggle}>
+                        {showMore ? "Скрий обектите" : "Разгледай още обекти"}
                     </Button>
                 </div>
             </div>
