@@ -21,9 +21,51 @@ const constructions: ConstructionClient[] = [
 ];
 
 const moreConstructions: ConstructionClient[] = [
-    ...constructions,
-    ...constructions,
-    ...constructions
+    {
+        name: "Складова сграда",
+        role: "\"Люник\" ЕООД",
+        image: "../images/skladova-sgrada.png"
+    },
+    {
+        name: "ACT мивка",
+        role: "\"АСТ\" ООД",
+        image: "../images/ACT-mivka.png"
+    },
+    {
+        name: "Покривно покритие над бункери",
+        role: "\"Строителство и строителни машини\" ЕООД",
+        image: "../images/pokrivno-pokritie.png"
+    },
+    {
+        name: "Billa магазин",
+        role: "\"Лъки Строй 2011\" ЕАД",
+        image: "../images/bila.png"
+    },
+    {
+        name: "Силозна база",
+        role: "\"Тива – I\" ЕООД",
+        image: "../images/silozna-baza.png"
+    },
+    {
+        name: "Навес за автомобили",
+        role: "\"Димаго 1\" ООД",
+        image: "../images/naves-avtomobili.png"
+    },
+    {
+        name: "Ритейл парк",
+        role: "\"Интер съплай\" ЕООД",
+        image: "../images/retail-park.png"
+    },
+    {
+        name: "Паркинг",
+        role: "\"Гарантстрой – Грозев\" ООД",
+        image: "../images/parking.png"
+    },
+    {
+        name: "Тунел паркинг",
+        role: "\"Транслог\" АД",
+        image: "../images/tunel-parking.png"
+    }
 ];
 
 const ConstructionCard: React.FC<{ client: ConstructionClient }> = ({ client }) => (
