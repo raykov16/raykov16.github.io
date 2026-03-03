@@ -1,4 +1,5 @@
 import React from 'react';
+import { Mail } from 'lucide-react';
 import { Button } from './ui/Button';
 
 export const Contact: React.FC = () => {
@@ -28,14 +29,19 @@ export const Contact: React.FC = () => {
                 <p className="text-gray-300 font-light">ул. "Свети Княз Борис 1" 88<br /><a href="tel:+35961860394" className="hover:text-white transition-colors">+359 618 60 394</a></p>
               </div>
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Стоян СТОЯНОВ</h4>
+                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Стоян Стоянов</h4>
                 <p className="text-gray-300 font-light"><a href="tel:+359888890714" className="hover:text-white transition-colors">+359 888 890 714</a></p>
               </div>
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Йордан ГЕОРГИЕВ</h4>
+                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Йордан Георгиев</h4>
                 <p className="text-gray-300 font-light"><a href="tel:+359887269383" className="hover:text-white transition-colors">+359 887 269 383</a></p>
               </div>
-              <div className="pt-4">
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Радослав Стоянов</h4>
+                <p className="text-gray-300 font-light"><a href="tel:+359887269383" className="hover:text-white transition-colors">+359 884 722 968</a></p>
+              </div>
+              <div className="pt-4 flex items-center gap-3">
+                <Mail className="w-5 h-5 text-corporate-gold" />
                 <a href="mailto:office@metalstroi-s-g.com" className="text-xl font-serif border-b border-gray-600 hover:border-white transition-colors">office@metalstroi-s-g.com</a>
               </div>
             </div>
