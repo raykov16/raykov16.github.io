@@ -7,8 +7,8 @@ const navItems: NavItem[] = [
   { label: 'ПРОДУКЦИЯ', href: '#services' },
   { label: 'ОБЕКТИ', href: '#constructions' },
   { label: 'СЕРТИФИКАТИ', href: '#certificates' },
-  { label: 'КОНТАКТИ', href: '#contact' },
   { label: 'ЗА НАС', href: '#about-us' },
+  { label: 'КОНТАКТИ', href: '#contact' },
 ];
 
 export const Navbar: React.FC = () => {
@@ -47,6 +47,20 @@ export const Navbar: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+
+    if (href === '#home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'
@@ -54,7 +68,7 @@ export const Navbar: React.FC = () => {
     >
       <div className="w-full px-6 md:px-24 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className={`text-2xl font-serif font-semibold tracking-widest uppercase ${isScrolled ? 'text-corporate-dark' : 'text-white'}`}>
+        <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className={`text-2xl font-serif font-semibold tracking-widest uppercase ${isScrolled ? 'text-corporate-dark' : 'text-white'}`}>
           МЕТАЛСТРОЙ С & Г
         </a>
 
@@ -64,6 +78,7 @@ export const Navbar: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
               className={`text-xs font-medium uppercase tracking-widest transition-colors relative group ${isScrolled ? 'text-black' : 'text-white'
                 }`}
             >
@@ -97,8 +112,8 @@ export const Navbar: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
               className="text-sm font-medium uppercase tracking-widest text-gray-800 hover:text-corporate-gold"
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.label}
             </a>
