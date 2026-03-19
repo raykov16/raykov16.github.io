@@ -270,7 +270,7 @@ export const translations: Record<Language, Translations> = {
       ],
       moreItems: [
         { name: 'Warehouse Building', role: '"Lunik" EOOD' },
-        { name: 'ACT Sink', role: '"AST" OOD' },
+        { name: 'ACT car wash', role: '"ACT" OOD' },
         { name: 'Roof Cover over Bunkers', role: '"Construction and Construction Machines" EOOD' },
         { name: 'Billa Store', role: '"Lucky Stroy 2011" EAD' },
         { name: 'Silo Base', role: '"Tiva – I" EOOD' },

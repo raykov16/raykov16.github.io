@@ -32,16 +32,20 @@ export const Contact: React.FC = () => {
                 <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">{t.contact.address}</h4>
                 <p className="text-gray-300 font-light">{t.contact.street}<br /><a href="tel:+35961860394" className="hover:text-white transition-colors">+359 618 60 394</a></p>
               </div>
+              {language === 'bg' && (
+                <>
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Стоян Стоянов</h4>
+                    <p className="text-gray-300 font-light"><a href="tel:+359888890714" className="hover:text-white transition-colors">+359 888 890 714</a></p>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Йордан Георгиев</h4>
+                    <p className="text-gray-300 font-light"><a href="tel:+359887269383" className="hover:text-white transition-colors">+359 887 269 383</a></p>
+                  </div>
+                </>
+              )}
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Стоян Стоянов</h4>
-                <p className="text-gray-300 font-light"><a href="tel:+359888890714" className="hover:text-white transition-colors">+359 888 890 714</a></p>
-              </div>
-              <div>
-                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Йордан Георгиев</h4>
-                <p className="text-gray-300 font-light"><a href="tel:+359887269383" className="hover:text-white transition-colors">+359 887 269 383</a></p>
-              </div>
-              <div>
-                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Радослав Стоянов</h4>
+                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">{language === 'en' ? 'Radoslav Stoyanov' : 'Радослав Стоянов'}</h4>
                 <p className="text-gray-300 font-light"><a href="tel:+359887269383" className="hover:text-white transition-colors">+359 884 722 968</a></p>
               </div>
               <div className="pt-4 flex items-center gap-3">
