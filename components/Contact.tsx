@@ -4,9 +4,12 @@ import { Button } from './ui/Button';
 import { useLanguage } from '../LanguageContext';
 
 export const Contact: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const [selectedFiles, setSelectedFiles] = React.useState<File[]>([]);
+
+  const mapLang = language === 'en' ? 'en' : 'bg';
+  const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2911.370885905196!2d25.7200512!3d43.138740500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9297bdaa9cac5%3A0xa5cf2f5e06e6b87e!2zItCc0LXRgtCw0LvRgdGC0YDQvtC5INCh0YLQvtGP0L3QvtCyINC4INCT0LXQvtGA0LPQuNC10LIiINCe0J7QlA!5e0!3m2!1s${mapLang}!2s${mapLang}!4v1770545966504!5m2!1s${mapLang}!2s${mapLang}`;
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -50,7 +53,7 @@ export const Contact: React.FC = () => {
 
           <div className="h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] bg-gray-800 rounded-2xl overflow-hidden shadow-2xl relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2911.370885905196!2d25.7200512!3d43.138740500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a9297bdaa9cac5%3A0xa5cf2f5e06e6b87e!2zItCc0LXRgtCw0LvRgdGC0YDQvtC5INCh0YLQvtGP0L3QvtCyINC4INCT0LXQvtGA0LPQuNC10LIiINCe0J7QlA!5e0!3m2!1sbg!2sbg!4v1770545966504!5m2!1sbg!2sbg"
+              src={mapSrc}
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '300px' }}
