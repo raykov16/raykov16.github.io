@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { NavItem } from '../types';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
-const navItems: NavItem[] = [
-  { label: 'НАЧАЛО', href: '#home' },
-  { label: 'ПРОДУКЦИЯ', href: '#services' },
-  { label: 'ОБЕКТИ', href: '#constructions' },
-  { label: 'СЕРТИФИКАТИ', href: '#certificates' },
-  { label: 'КОНТАКТИ', href: '#contact' },
-  { label: 'ЗА НАС', href: '#about-us' },
+interface NavItemDef {
+  labelKey: 'home' | 'services' | 'constructions' | 'certificates' | 'contact' | 'aboutUs';
+  href: string;
+}
+
+const navItemDefs: NavItemDef[] = [
+  { labelKey: 'home', href: '#home' },
+  { labelKey: 'services', href: '#services' },
+  { labelKey: 'constructions', href: '#constructions' },
+  { labelKey: 'certificates', href: '#certificates' },
+  { labelKey: 'contact', href: '#contact' },
+  { labelKey: 'aboutUs', href: '#about-us' },
 ];
 
 export const Navbar: React.FC = () => {
+  const { language, t, toggleLanguage } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -34,12 +40,12 @@ export const Navbar: React.FC = () => {
         });
       },
       {
-        rootMargin: '-50% 0px -50% 0px', // Trigger when section is in the middle of viewport
+        rootMargin: '-50% 0px -50% 0px',
         threshold: 0
       }
     );
 
-    navItems.forEach((item) => {
+    navItemDefs.forEach((item) => {
       const element = document.getElementById(item.href.substring(1));
       if (element) observer.observe(element);
     });
@@ -59,15 +65,15 @@ export const Navbar: React.FC = () => {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex space-x-6 xl:space-x-8 group/nav">
-          {navItems.map((item) => (
+        <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 group/nav">
+          {navItemDefs.map((item) => (
             <a
-              key={item.label}
+              key={item.labelKey}
               href={item.href}
               className={`text-xs font-medium uppercase tracking-widest transition-colors relative group ${isScrolled ? 'text-black' : 'text-white'
                 }`}
             >
-              {item.label}
+              {t.nav[item.labelKey]}
               <span className={`absolute -bottom-2 left-0 w-full h-0.5 transform transition-transform duration-300 ${isScrolled ? 'bg-black' : 'bg-white'
                 } ${activeSection === item.href.substring(1)
                   ? 'scale-x-100 origin-left group-hover/nav:scale-x-0 group-hover/nav:origin-right group-hover:!scale-x-100 group-hover:!origin-left'
@@ -75,32 +81,61 @@ export const Navbar: React.FC = () => {
                 }`}></span>
             </a>
           ))}
+
+          {/* Language Toggle - Desktop */}
+          <button
+            onClick={toggleLanguage}
+            className={`flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest transition-all duration-300 border rounded-full px-3 py-1.5 ml-2 ${
+              isScrolled
+                ? 'text-corporate-dark border-corporate-dark/30 hover:bg-corporate-dark hover:text-white'
+                : 'text-white border-white/40 hover:bg-white hover:text-corporate-dark'
+            }`}
+            title={language === 'bg' ? 'Switch to English' : 'Превключи на Български'}
+          >
+            <Globe size={14} />
+            {language === 'bg' ? 'EN' : 'BG'}
+          </button>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="lg:hidden focus:outline-none"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? (
-            <X className={isScrolled ? 'text-corporate-dark' : 'text-white'} />
-          ) : (
-            <Menu className={isScrolled ? 'text-corporate-dark' : 'text-white'} />
-          )}
-        </button>
+        {/* Mobile Toggle + Language */}
+        <div className="lg:hidden flex items-center gap-3">
+          {/* Language Toggle - Mobile */}
+          <button
+            onClick={toggleLanguage}
+            className={`flex items-center gap-1 text-xs font-bold uppercase tracking-wider transition-all duration-300 border rounded-full px-2.5 py-1 ${
+              isScrolled
+                ? 'text-corporate-dark border-corporate-dark/30 hover:bg-corporate-dark hover:text-white'
+                : 'text-white border-white/40 hover:bg-white hover:text-corporate-dark'
+            }`}
+          >
+            <Globe size={12} />
+            {language === 'bg' ? 'EN' : 'BG'}
+          </button>
+
+          <button
+            className="focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className={isScrolled ? 'text-corporate-dark' : 'text-white'} />
+            ) : (
+              <Menu className={isScrolled ? 'text-corporate-dark' : 'text-white'} />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg py-8 px-4 sm:px-6 flex flex-col space-y-4 lg:hidden animate-fade-in">
-          {navItems.map((item) => (
+          {navItemDefs.map((item) => (
             <a
-              key={item.label}
+              key={item.labelKey}
               href={item.href}
               className="text-sm font-medium uppercase tracking-widest text-gray-800 hover:text-corporate-gold"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {item.label}
+              {t.nav[item.labelKey]}
             </a>
           ))}
         </div>

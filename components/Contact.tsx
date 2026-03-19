@@ -1,9 +1,10 @@
 import React from 'react';
 import { Mail } from 'lucide-react';
 import { Button } from './ui/Button';
+import { useLanguage } from '../LanguageContext';
 
 export const Contact: React.FC = () => {
-  /* Step 1: Add necessary hooks */
+  const { t } = useLanguage();
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const [selectedFiles, setSelectedFiles] = React.useState<File[]>([]);
 
@@ -18,15 +19,15 @@ export const Contact: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 mb-12">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-serif mb-6 sm:mb-8">Свържи се с нас</h2>
+            <h2 className="text-3xl sm:text-4xl font-serif mb-6 sm:mb-8">{t.contact.title}</h2>
             <p className="text-gray-400 font-light mb-8 sm:mb-12 max-w-md leading-relaxed">
-              „METAЛСТРОЙ СТОЯНОВ и ГЕОРГИЕВ“ ООД е фирма, специализирана в проектирането и изграждането на метални конструкции, подходящи за промишлени, търговски и административни сгради.
+              {t.contact.description}
             </p>
 
             <div className="space-y-6">
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">5100, гр. Горна Оряховица</h4>
-                <p className="text-gray-300 font-light">ул. "Свети Княз Борис 1" 88<br /><a href="tel:+35961860394" className="hover:text-white transition-colors">+359 618 60 394</a></p>
+                <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">{t.contact.address}</h4>
+                <p className="text-gray-300 font-light">{t.contact.street}<br /><a href="tel:+35961860394" className="hover:text-white transition-colors">+359 618 60 394</a></p>
               </div>
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-widest text-corporate-gold mb-2">Стоян Стоянов</h4>
@@ -62,24 +63,24 @@ export const Contact: React.FC = () => {
         </div>
 
         <div className="bg-white/5 p-6 sm:p-8 md:p-12 border border-white/10 rounded-2xl">
-          <h3 className="text-2xl sm:text-3xl font-serif text-center text-white mb-6 sm:mb-8">Направи запитване</h3>
+          <h3 className="text-2xl sm:text-3xl font-serif text-center text-white mb-6 sm:mb-8">{t.contact.formTitle}</h3>
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Име</label>
+                <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">{t.contact.firstName}</label>
                 <input type="text" className="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-corporate-gold transition-colors" />
               </div>
               <div>
-                <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Фамилия</label>
+                <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">{t.contact.lastName}</label>
                 <input type="text" className="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-corporate-gold transition-colors" />
               </div>
             </div>
             <div>
-              <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">E-mail</label>
+              <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">{t.contact.email}</label>
               <input type="email" className="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-corporate-gold transition-colors" />
             </div>
             <div>
-              <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">Съобщение</label>
+              <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2">{t.contact.message}</label>
               <textarea rows={4} className="w-full bg-transparent border-b border-gray-600 py-2 text-white focus:outline-none focus:border-corporate-gold transition-colors resize-none"></textarea>
             </div>
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
@@ -89,12 +90,12 @@ export const Contact: React.FC = () => {
                 onClick={() => fileInputRef.current?.click()}
                 className="py-3 px-6 text-xs w-full sm:w-auto"
               >
-                Прикачи файлове
+                {t.contact.attachFiles}
               </Button>
               <span className="text-sm text-gray-400 text-center sm:text-left">
-                {selectedFiles.length > 0 ? `${selectedFiles.length} файл(а)` : ''}
+                {selectedFiles.length > 0 ? t.contact.fileCount(selectedFiles.length) : ''}
               </span>
-              <Button variant="primary" className="w-full sm:w-auto">ИЗПРАТИ</Button>
+              <Button variant="primary" className="w-full sm:w-auto">{t.contact.send}</Button>
               <input
                 type="file"
                 multiple
@@ -108,10 +109,10 @@ export const Contact: React.FC = () => {
         </div>
 
         <div className="border-t border-white/10 mt-16 sm:mt-20 pt-8 flex flex-col md:flex-row justify-between items-center sm:items-start text-center sm:text-left text-xs text-gray-500 gap-4">
-          <p>&copy; {new Date().getFullYear()} METALSTROY. All rights reserved.</p>
+          <p>{t.contact.copyright}</p>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+            <a href="#" className="hover:text-white transition-colors">{t.contact.privacyPolicy}</a>
+            <a href="#" className="hover:text-white transition-colors">{t.contact.termsOfUse}</a>
           </div>
         </div>
       </div>

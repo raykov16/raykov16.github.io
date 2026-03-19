@@ -3,8 +3,11 @@ import { Button } from './ui/Button';
 import heroBg from '../images/LandingPageZavarchik.png';
 import heroBgMobile from '../images/LandingPageVerticalZavarchik.png';
 import logoWhite from '../images/logo-metalstroi-white.png';
+import { useLanguage } from '../LanguageContext';
 
 export const Hero: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="home" className="relative h-screen bg-[#050505] lg:bg-transparent overflow-hidden">
       {/* Background Image with Overlay (Mobile Only < lg) */}
@@ -44,15 +47,15 @@ export const Hero: React.FC = () => {
         {/* Text & Buttons - Mobile: Bottom Half Centered | Desktop: Left Middle */}
         <div className="flex-1 lg:flex-none flex flex-col items-center justify-center lg:items-start text-center lg:text-left text-white max-w-2xl mx-auto lg:mx-0 pb-16 lg:pb-0 h-full">
           <h2 className="text-xs sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-2 sm:mb-4 opacity-90">
-            МЕТАЛСТРОЙ Стоянов И Георгиев
+            {t.hero.subtitle}
           </h2>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] min-[1200px]:text-[3.25rem] xl:text-6xl font-serif font-light mb-6 sm:mb-8 lg:mb-12 leading-tight">
-            Производство и монтаж <br />
-            на метални конструкции
+            {t.hero.titleLine1} <br />
+            {t.hero.titleLine2}
           </h1>
           <div className="flex flex-col flex-wrap sm:flex-row justify-center lg:justify-start gap-4">
-            <Button variant="primary" href="#contact">ЗАПИТВАНЕ</Button>
-            <Button variant="secondary-dark" href="#constructions">ОБЕКТИ</Button>
+            <Button variant="primary" href="#contact">{t.hero.ctaInquiry}</Button>
+            <Button variant="secondary-dark" href="#constructions">{t.hero.ctaProjects}</Button>
           </div>
         </div>
       </div>

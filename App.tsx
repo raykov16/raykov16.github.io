@@ -1,4 +1,5 @@
 import React from 'react';
+import { LanguageProvider } from './LanguageContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 
@@ -9,17 +10,19 @@ import { Contact } from './components/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 selection:bg-corporate-gold selection:text-white">
-      <Navbar />
-      <main>
-        <Hero />
+    <LanguageProvider>
+      <div className="min-h-screen bg-gray-50 text-gray-900 selection:bg-corporate-gold selection:text-white">
+        <Navbar />
+        <main>
+          <Hero />
 
-        <Services />
-        <Constructions />
-        <Certificates />
-      </main>
-      <Contact />
-    </div>
+          <Services />
+          <Constructions />
+          <Certificates />
+        </main>
+        <Contact />
+      </div>
+    </LanguageProvider>
   );
 }
 

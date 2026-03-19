@@ -1,73 +1,27 @@
 import React from 'react';
+import { useLanguage } from '../LanguageContext';
 
-interface ServiceItem {
-  title: string;
-  description: string[];
-  image: string;
-}
-
-const services: ServiceItem[] = [
-  {
-    title: "Производство с качество и професионализъм",
-    description: [
-      "Стенд за автоматично заваряване",
-      "CNC машини за разпробиване и лазерно рязане",
-      "Комбинирана автоматизирана линия за събиране, заваряване  и изправяне на съставни профили",
-      "Импулсни заваръчни апарати Fronius, Lincoln electric, Esab, Lorch",
-      "Плазмено и газо-кислородно рязане Pierce",
-      "Внедряване в производството на параболични рамкови елементи с променливо 2Т сечение и олекотяващи кръгови отвори в стеблото"
-    ],
-    image: "../images/proizvodstvo.png"
-  },
-  {
-    title: "Механизация",
-    description: [
-      "9 броя автовишки",
-      "4 броя автокранове",
-      "Бордови камион 8 метра",
-      "Влекач с полуремарке",
-      "Разтегателна платофрма",
-      "Платформа за превоз на механизация"
-    ],
-    image: "../images/montajni-sredstva.png"
-  },
-  {
-    title: "Предимства на металните конструкции",
-    description: [
-      "По-бърза изработка от традиционния тип строителство",
-      "Лесен монтаж и демонтаж, с цел бърза смяна на мястото",
-      "Напълно рециклируеми",
-      "По-леки и издръжливи в сравнение с тежките стоманобетонни конструкции",
-      "По - дълъг живот, от стоманобетонните конструкции"
-    ],
-    image: "../images/predimstva.png"
-  },
-  {
-    title: "Приложение на металните конструкции",
-    description: [
-      "Метални халета",
-      "Фабрики",
-      "Мостове",
-      "Магазини",
-      "Селскостопански постройки",
-      "Много други"
-    ],
-    image: "../images/prilojenie.png"
-  }
+const serviceImages = [
+  "../images/proizvodstvo.png",
+  "../images/montajni-sredstva.png",
+  "../images/predimstva.png",
+  "../images/prilojenie.png",
 ];
 
 export const Services: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="services" className="py-16 sm:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="mb-12 sm:mb-20 text-center">
-          <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2 block">ПРОДУКЦИЯ</h2>
-          <span className="text-3xl sm:text-4xl font-serif text-corporate-dark">Нашите услуги</span>
+          <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2 block">{t.services.sectionLabel}</h2>
+          <span className="text-3xl sm:text-4xl font-serif text-corporate-dark">{t.services.sectionTitle}</span>
           <div className="section-header-divider"></div>
         </div>
 
         <div className="space-y-24">
-          {services.map((service, index) => (
+          {t.services.items.map((service, index) => (
             <div
               key={index}
               className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-8 sm:gap-12 lg:gap-20`}
@@ -76,11 +30,10 @@ export const Services: React.FC = () => {
               <div className="w-full lg:w-1/2 relative group">
                 <div className="absolute inset-0 bg-corporate-dark/10 group-hover:bg-transparent transition-all duration-500 z-10 rounded-xl"></div>
                 <img
-                  src={service.image}
+                  src={serviceImages[index]}
                   alt={service.title}
                   className="w-full h-[250px] sm:h-[300px] lg:h-[400px] xl:h-[450px] object-cover shadow-lg rounded-xl"
                 />
-                {/* Decorative border/box like in reference if needed, keep simple for now */}
               </div>
 
               {/* Text Side */}
