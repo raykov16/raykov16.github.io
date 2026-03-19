@@ -3,6 +3,7 @@ export type Language = 'bg' | 'en';
 export interface Translations {
   // Navbar
   nav: {
+    logo: string;
     home: string;
     services: string;
     constructions: string;
@@ -67,6 +68,7 @@ export interface Translations {
 export const translations: Record<Language, Translations> = {
   bg: {
     nav: {
+      logo: 'МЕТАЛСТРОЙ С & Г',
       home: 'НАЧАЛО',
       services: 'ПРОДУКЦИЯ',
       constructions: 'ОБЕКТИ',
@@ -192,19 +194,20 @@ export const translations: Record<Language, Translations> = {
   },
   en: {
     nav: {
+      logo: 'Metalstroi S & G',
       home: 'HOME',
       services: 'SERVICES',
-      constructions: 'PROJECTS',
+      constructions: 'CONSTRUCTIONS',
       certificates: 'CERTIFICATES',
       contact: 'CONTACT',
       aboutUs: 'ABOUT US',
     },
     hero: {
-      subtitle: 'METALSTROY Stoyanov & Georgiev',
+      subtitle: 'Metalstroi Stoyanov & Georgiev',
       titleLine1: 'Production and Assembly',
-      titleLine2: 'of Metal Structures',
+      titleLine2: 'of Metal Constructions',
       ctaInquiry: 'INQUIRY',
-      ctaProjects: 'PROJECTS',
+      ctaProjects: 'CONSTRUCTIONS',
     },
     services: {
       sectionLabel: 'SERVICES',
@@ -233,7 +236,7 @@ export const translations: Record<Language, Translations> = {
           ],
         },
         {
-          title: 'Advantages of Metal Structures',
+          title: 'Advantages of Metal Constructions',
           description: [
             'Faster production than traditional construction',
             'Easy assembly and disassembly for quick relocation',
@@ -243,7 +246,7 @@ export const translations: Record<Language, Translations> = {
           ],
         },
         {
-          title: 'Applications of Metal Structures',
+          title: 'Applications of Metal Constructions',
           description: [
             'Metal halls',
             'Factories',
@@ -256,10 +259,10 @@ export const translations: Record<Language, Translations> = {
       ],
     },
     constructions: {
-      sectionLabel: 'Projects',
+      sectionLabel: 'Constructions',
       sectionTitle: 'Over 100 happy clients',
-      showMore: 'View more projects',
-      showLess: 'Hide projects',
+      showMore: 'View more constructions',
+      showLess: 'Hide constructions',
       items: [
         { name: 'Summer Theatre, Veliko Tarnovo', role: '"Mistral 7" OOD' },
         { name: 'VIP Canopy at PFC Septemvri Stadium, Sofia', role: '"DIT HOTELS" OOD' },
@@ -285,21 +288,21 @@ export const translations: Record<Language, Translations> = {
       euroPrograms: [
         {
           code: 'Electricity Production from Renewable Energy Sources',
-          description: 'On 06.01.2025, METALSTROY – STOYANOV & GEORGIEV OOD signed an Administrative Contract for the implementation of investment BG-RRP-4.032-0134-C01 under Procedure BG-RRP-4.032 "Support for new capacities for electricity production from renewable energy sources and electricity storage with installed capacity from 200 kW to 2 MW" (Call 1), Investment C4.I6: "Support for new capacities for electricity production from renewable energy sources and electricity storage" from the National Recovery and Resilience Plan of the Republic of Bulgaria (NRRP).\n\n Overall project objective: The aim of the project proposal is in line with the procedure, whose main objective is to contribute to increasing the share of clean energy in Bulgaria\'s energy mix on the path to climate neutrality. The production of electricity from renewable energy sources with ESS addresses grid congestion issues by contributing to the balancing of the electricity system and reducing market distortion.\n\n Total project value: BGN 555,555.00, of which requested funding (Grant): BGN 277,777.50.',
+          description: 'On 06.01.2025, Metalstroi – STOYANOV & GEORGIEV OOD signed an Administrative Contract for the implementation of investment BG-RRP-4.032-0134-C01 under Procedure BG-RRP-4.032 "Support for new capacities for electricity production from renewable energy sources and electricity storage with installed capacity from 200 kW to 2 MW" (Call 1), Investment C4.I6: "Support for new capacities for electricity production from renewable energy sources and electricity storage" from the National Recovery and Resilience Plan of the Republic of Bulgaria (NRRP).\n\n Overall project objective: The aim of the project proposal is in line with the procedure, whose main objective is to contribute to increasing the share of clean energy in Bulgaria\'s energy mix on the path to climate neutrality. The production of electricity from renewable energy sources with ESS addresses grid congestion issues by contributing to the balancing of the electricity system and reducing market distortion.\n\n Total project value: BGN 555,555.00, of which requested funding (Grant): BGN 277,777.50.',
         },
         {
           code: 'Support for the Transition to a Circular Economy',
-          description: '"METALSTROY – STOYANOV & GEORGIEV" OOD is the final beneficiary of project No. BG-RRP-3.008-0244-C01 "Support for the transition to a circular economy", implemented under procedure BG-RRP-3.008 "Support for the transition to a circular economy in enterprises". The total project value is BGN 455,000.00, of which grant funding – BGN 227,500.00 European financing through the NextGenerationEU instrument.\n\n The project will acquire: Laser cutting machine for pipes and profiles (1 unit) and CNC hydraulic press brake (1 unit). Two activities will be implemented for acquiring new technologies for cutting and bending to introduce a circular model aimed at reducing the amount of metal waste generated.',
+          description: '"Metalstroi – STOYANOV & GEORGIEV" OOD is the final beneficiary of project No. BG-RRP-3.008-0244-C01 "Support for the transition to a circular economy", implemented under procedure BG-RRP-3.008 "Support for the transition to a circular economy in enterprises". The total project value is BGN 455,000.00, of which grant funding – BGN 227,500.00 European financing through the NextGenerationEU instrument.\n\n The project will acquire: Laser cutting machine for pipes and profiles (1 unit) and CNC hydraulic press brake (1 unit). Two activities will be implemented for acquiring new technologies for cutting and bending to introduce a circular model aimed at reducing the amount of metal waste generated.',
         },
         {
           code: 'Support for Medium Enterprises to Overcome Economic Consequences of COVID-19',
-          description: 'METALSTROY – STOYANOV & GEORGIEV OOD is a beneficiary under Project BG16RFOP002-2.077-0505-C01 "Support for medium enterprises to overcome the economic consequences of the COVID-19 pandemic", implemented with the financial support of the Operational Programme "Innovation and Competitiveness" 2014-2020, co-financed by the EU through the European Regional Development Fund.\n\n Total project value: BGN 150,000.00, of which BGN 127,500.00 European and BGN 22,500.00 national co-financing. The project duration is 3 months.\n\n The project is aimed at supporting medium enterprises to overcome the economic consequences of the COVID-19 pandemic.',
+          description: 'Metalstroi – STOYANOV & GEORGIEV OOD is a beneficiary under Project BG16RFOP002-2.077-0505-C01 "Support for medium enterprises to overcome the economic consequences of the COVID-19 pandemic", implemented with the financial support of the Operational Programme "Innovation and Competitiveness" 2014-2020, co-financed by the EU through the European Regional Development Fund.\n\n Total project value: BGN 150,000.00, of which BGN 127,500.00 European and BGN 22,500.00 national co-financing. The project duration is 3 months.\n\n The project is aimed at supporting medium enterprises to overcome the economic consequences of the COVID-19 pandemic.',
         },
       ],
     },
     contact: {
       title: 'Contact Us',
-      description: '"METALSTROY STOYANOV & GEORGIEV" OOD is a company specialized in the design and construction of metal structures suitable for industrial, commercial, and administrative buildings.',
+      description: '"Metalstroi STOYANOV & GEORGIEV" OOD is a company specialized in the design and construction of metal constructions suitable for industrial, commercial, and administrative buildings.',
       address: '5100, Gorna Oryahovitsa',
       street: '88 "Sveti Knyaz Boris I" St.',
       formTitle: 'Make an Inquiry',
@@ -310,7 +313,7 @@ export const translations: Record<Language, Translations> = {
       attachFiles: 'Attach Files',
       fileCount: (count: number) => `${count} file(s)`,
       send: 'SEND',
-      copyright: `© ${new Date().getFullYear()} METALSTROY. All rights reserved.`,
+      copyright: `© ${new Date().getFullYear()} Metalstroi. All rights reserved.`,
       privacyPolicy: 'Privacy Policy',
       termsOfUse: 'Terms of Use',
     },
