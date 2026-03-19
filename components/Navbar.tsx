@@ -52,14 +52,14 @@ export const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'
         }`}
     >
-      <div className="w-full px-6 md:px-24 flex justify-between items-center">
+      <div className="w-full px-4 sm:px-6 md:px-12 lg:px-24 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className={`text-2xl font-serif font-semibold tracking-widest uppercase ${isScrolled ? 'text-corporate-dark' : 'text-white'}`}>
+        <a href="#" className={`text-xl sm:text-2xl font-serif font-semibold tracking-widest uppercase ${isScrolled ? 'text-corporate-dark' : 'text-white'}`}>
           МЕТАЛСТРОЙ С & Г
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-8 group/nav">
+        <div className="hidden lg:flex space-x-6 xl:space-x-8 group/nav">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden focus:outline-none"
+          className="lg:hidden focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
@@ -92,7 +92,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-lg py-8 px-6 flex flex-col space-y-4 md:hidden animate-fade-in">
+        <div className="absolute top-full left-0 w-full bg-white shadow-lg py-8 px-4 sm:px-6 flex flex-col space-y-4 lg:hidden animate-fade-in">
           {navItems.map((item) => (
             <a
               key={item.label}

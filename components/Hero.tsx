@@ -18,15 +18,15 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-6 md:px-24 text-left text-white h-full flex items-center">
+      <div className="relative z-10 w-full px-4 sm:px-6 md:px-12 lg:px-24 text-left text-white h-full flex items-center">
         <div className="max-w-2xl">
-          <h2 className="text-sm md:text-base tracking-[0.3em] uppercase mb-4 opacity-90">
+          <h2 className="text-xs sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-2 sm:mb-4 opacity-90">
             МЕТАЛСТРОЙ Стоянов И Георгиев
           </h2>
-          <h1 className="text-5xl md:text-7xl font-serif font-light mb-12 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-light mb-8 sm:mb-12 leading-tight">
             Производство и монтаж на метални конструкции
           </h1>
-          <div className="flex flex-col md:flex-row justify-start gap-4">
+          <div className="flex flex-col sm:flex-row justify-start gap-4">
             <Button variant="primary" href="#contact">ЗАПИТВАНЕ</Button>
             <Button variant="secondary-dark" href="#constructions">ОБЕКТИ</Button>
           </div>
@@ -39,8 +39,8 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Bottom Right Logo */}
-      <div className="absolute bottom-8 right-6 md:bottom-12 md:right-12 z-20">
-        <img src={logoWhite} alt="METALSTROY" className="h-24 md:h-36 w-auto opacity-90" />
+      <div className="absolute bottom-6 right-4 sm:bottom-8 sm:right-6 md:bottom-12 md:right-12 z-20">
+        <img src={logoWhite} alt="METALSTROY" className="h-16 sm:h-20 md:h-24 lg:h-36 w-auto opacity-90" />
       </div>
     </section>
   );
