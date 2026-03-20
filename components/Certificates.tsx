@@ -25,7 +25,7 @@ const certificateImages = [
 ];
 
 export const Certificates: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
   const [selectedEuroProgram, setSelectedEuroProgram] = useState<EuroProgram | null>(null);
 
@@ -48,11 +48,11 @@ export const Certificates: React.FC = () => {
   const closeEuroProgram = () => setSelectedEuroProgram(null);
 
   return (
-    <section id="certificates" className="py-16 sm:py-24 bg-white">
+    <section id="certificates" className="py-16 sm:py-24 bg-white" aria-label={language === 'en' ? 'ISO Certificates and European programs - Metalstroi' : 'ISO Сертификати и Европейски програми – Металстрой'}>
       <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="mb-12 sm:mb-16 text-center">
           <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2 block">{t.certificates.sectionLabel}</h2>
-          <span className="text-3xl sm:text-4xl font-serif text-corporate-dark">{t.certificates.sectionTitle}</span>
+          <p className="text-3xl sm:text-4xl font-serif text-corporate-dark">{t.certificates.sectionTitle}</p>
           <div className="section-header-divider"></div>
         </div>
 
@@ -65,7 +65,7 @@ export const Certificates: React.FC = () => {
             >
               <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <div className="w-16 h-16 bg-[#001fd2] rounded-2xl flex items-center justify-center text-corporate-dark overflow-hidden">
-                  <img src="../images/TUV.png" alt="TUV" className="w-full h-full object-cover" />
+                  <img src="../images/TUV.png" alt="TUV certification - Металстрой" className="w-full h-full object-cover" loading="lazy" />
                 </div>
               </div>
               <div>
@@ -85,7 +85,7 @@ export const Certificates: React.FC = () => {
             >
               <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <div className="w-16 h-16 bg-[#003399] rounded-2xl flex items-center justify-center text-corporate-dark overflow-hidden">
-                  <img src="../images/euro-flag.png" alt="European Program" className="w-full h-full object-cover" />
+                  <img src="../images/euro-flag.png" alt="European Program - Металстрой Стоянов и Георгиев" className="w-full h-full object-cover" loading="lazy" />
                 </div>
               </div>
               <div>

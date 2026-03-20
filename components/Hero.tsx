@@ -6,10 +6,10 @@ import logoWhite from '../images/logo-metalstroi-white.png';
 import { useLanguage } from '../LanguageContext';
 
 export const Hero: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
-    <section id="home" className="relative h-screen bg-[#050505] lg:bg-transparent overflow-hidden">
+    <section id="home" className="relative h-screen bg-[#050505] lg:bg-transparent overflow-hidden" aria-label={language === 'en' ? 'Metalstroi Stoyanov and Georgiev - Production and assembly of metal constructions' : 'Металстрой Стоянов и Георгиев – Производство и монтаж на метални конструкции'}>
       {/* Background Image with Overlay (Mobile Only < lg) */}
       <div
         className="lg:hidden absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
         <div className="flex-1 lg:flex-none flex items-center justify-center lg:items-start lg:justify-start lg:absolute lg:bottom-12 lg:right-12 w-full lg:w-auto pt-24 pb-8 lg:p-0">
           <img
             src={logoWhite}
-            alt="METALSTROY"
+            alt={language === 'en' ? 'Metalstroi Stoyanov and Georgiev – Metal constructions company logo' : 'Металстрой Стоянов и Георгиев – лого на фирма за метални конструкции'}
             className="max-h-[140px] sm:max-h-[180px] md:max-h-[220px] lg:max-h-none lg:h-36 w-auto opacity-90 object-contain mx-auto lg:mx-0"
           />
         </div>

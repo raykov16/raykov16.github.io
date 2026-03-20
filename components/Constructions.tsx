@@ -32,8 +32,9 @@ const ConstructionCard: React.FC<{ client: CardProps }> = ({ client }) => (
       <div className="absolute inset-0 bg-corporate-dark/10 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
       <img
         src={client.image}
-        alt={client.name}
+        alt={`${client.name} - metal construction project`}
         className="w-full h-[250px] sm:h-[300px] lg:h-[400px] object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
+        loading="lazy"
       />
     </div>
     <h3 className="text-xl sm:text-2xl font-serif text-corporate-dark">{client.name}</h3>
@@ -42,7 +43,7 @@ const ConstructionCard: React.FC<{ client: CardProps }> = ({ client }) => (
 );
 
 export const Constructions: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [showMore, setShowMore] = useState(false);
 
   const handleToggle = () => {
@@ -66,12 +67,12 @@ export const Constructions: React.FC = () => {
   }));
 
   return (
-    <section id="constructions" className="flex flex-col">
+    <section id="constructions" className="flex flex-col" aria-label={language === 'en' ? 'Metal construction projects by Metalstroi' : 'Обекти на Металстрой – метални конструкции'}>
       <div className="py-16 sm:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 md:px-12">
           <div className="mb-12 sm:mb-20 text-center">
             <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2 block">{t.constructions.sectionLabel}</h2>
-            <span className="text-3xl sm:text-4xl font-serif text-corporate-dark">{t.constructions.sectionTitle}</span>
+            <p className="text-3xl sm:text-4xl font-serif text-corporate-dark">{t.constructions.sectionTitle}</p>
             <div className="section-header-divider"></div>
           </div>
 

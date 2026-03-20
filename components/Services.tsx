@@ -9,14 +9,14 @@ const serviceImages = [
 ];
 
 export const Services: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
-    <section id="services" className="py-16 sm:py-24 bg-white overflow-hidden">
+    <section id="services" className="py-16 sm:py-24 bg-white overflow-hidden" aria-label={language === 'en' ? 'Metal constructions services - production, assembly and mechanization' : 'Услуги за метални конструкции – производство, монтаж и механизация'}>
       <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="mb-12 sm:mb-20 text-center">
           <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-2 block">{t.services.sectionLabel}</h2>
-          <span className="text-3xl sm:text-4xl font-serif text-corporate-dark">{t.services.sectionTitle}</span>
+          <p className="text-3xl sm:text-4xl font-serif text-corporate-dark">{t.services.sectionTitle}</p>
           <div className="section-header-divider"></div>
         </div>
 
@@ -31,8 +31,9 @@ export const Services: React.FC = () => {
                 <div className="absolute inset-0 bg-corporate-dark/10 group-hover:bg-transparent transition-all duration-500 z-10 rounded-xl"></div>
                 <img
                   src={serviceImages[index]}
-                  alt={service.title}
+                  alt={`${service.title} - ${language === 'en' ? 'Metalstroi metal constructions' : 'Металстрой метални конструкции'}`}
                   className="w-full h-[250px] sm:h-[300px] lg:h-[400px] xl:h-[450px] object-cover shadow-lg rounded-xl"
+                  loading="lazy"
                 />
               </div>
 

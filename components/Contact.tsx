@@ -18,7 +18,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <footer id="contact" className="bg-corporate-dark text-white py-16 sm:py-24">
+    <footer id="contact" className="bg-corporate-dark text-white py-16 sm:py-24" aria-label={language === 'en' ? 'Contact Metalstroi Stoyanov and Georgiev - metal constructions inquiries' : 'Контакти Металстрой Стоянов и Георгиев – запитвания за метални конструкции'}>
       <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 mb-12">
           <div>
@@ -65,6 +65,7 @@ export const Contact: React.FC = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0"
+              title={language === 'en' ? 'Metalstroi Stoyanov and Georgiev office location on Google Maps - Gorna Oryahovitsa' : 'Местоположение на Металстрой Стоянов и Георгиев на Google Карти – Горна Оряховица'}
             ></iframe>
           </div>
         </div>

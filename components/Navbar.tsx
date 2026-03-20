@@ -57,10 +57,11 @@ export const Navbar: React.FC = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'
         }`}
+      aria-label={language === 'en' ? 'Main navigation - Metalstroi' : 'Главна навигация – Металстрой'}
     >
       <div className="w-full px-4 sm:px-6 md:px-12 lg:px-24 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className={`text-xl sm:text-2xl font-serif font-semibold tracking-widest uppercase ${isScrolled ? 'text-corporate-dark' : 'text-white'}`}>
+        <a href="#" className={`text-xl sm:text-2xl font-serif font-semibold tracking-widest uppercase ${isScrolled ? 'text-corporate-dark' : 'text-white'}`} title={language === 'en' ? 'Metalstroi Stoyanov and Georgiev - Metal constructions' : 'Металстрой Стоянов и Георгиев – Метални конструкции'}>
           {t.nav.logo}
         </a>
 
