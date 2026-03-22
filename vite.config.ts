@@ -35,7 +35,7 @@ function setupEmailApi(env: Record<string, string>): Plugin {
 
           const mailOptions = {
             from: env.GMAIL_USER,
-            to: env.GMAIL_USER,
+            to: env.GMAIL_RECIPIENT,
             subject: `[Metalstroy Website] Inquiry from ${firstName} ${lastName}`,
             text: `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}\n\n${attachments.length > 0 ? `Attachments: ${attachments.length} file(s)\n` : ''}---\nThis email was sent from the Metalstroy website contact form.`,
             attachments
