@@ -41,11 +41,26 @@ export const Contact: React.FC = () => {
       if (response.ok) {
         setIsSuccess(true);
       } else {
-        setErrorMessage(
-          language === 'en'
-            ? 'Failed to send message. Please try again.'
-            : 'Неуспешно изпращане. Моля, опитайте отново.'
-        );
+        const result = await response.json().catch(() => ({}));
+        if (result.code === 'TOO_MANY_FILES') {
+          setErrorMessage(
+            language === 'en'
+              ? 'You can upload up to 5 files maximum.'
+              : 'Можете да прикачите максимум 5 файла.'
+          );
+        } else if (result.code === 'FILE_TOO_LARGE') {
+          setErrorMessage(
+            language === 'en'
+              ? 'Each file must be under 10 MB.'
+              : 'Всеки файл трябва да е под 10 MB.'
+          );
+        } else {
+          setErrorMessage(
+            language === 'en'
+              ? 'Failed to send message. Please try again.'
+              : 'Неуспешно изпращане. Моля, опитайте отново.'
+          );
+        }
       }
     } catch (error) {
       console.error('Error sending form:', error);
