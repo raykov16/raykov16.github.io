@@ -26,20 +26,16 @@ export const Contact: React.FC = () => {
     setErrorMessage('');
 
     const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
+
+    // Append selected files under the 'files' field for multer
+    selectedFiles.forEach((file) => {
+      formData.append('files', file);
+    });
 
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          firstName: data.firstName,
-          lastName: data.lastName,
-          email: data.email,
-          message: data.message
-        })
+        body: formData
       });
 
       if (response.ok) {
