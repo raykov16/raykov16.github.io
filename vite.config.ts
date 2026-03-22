@@ -36,8 +36,8 @@ function setupEmailApi(env: Record<string, string>): Plugin {
           const mailOptions = {
             from: env.GMAIL_USER,
             to: env.GMAIL_RECIPIENT,
-            subject: `[Metalstroy Website] Inquiry from ${firstName} ${lastName}`,
-            text: `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}\n\n${attachments.length > 0 ? `Attachments: ${attachments.length} file(s)\n` : ''}---\nThis email was sent from the Metalstroy website contact form.`,
+            subject: `[Metalstroy Website] Запитване от ${firstName} ${lastName}`,
+            text: `Име: ${firstName} ${lastName}\nE-mail: ${email}\n\nСъобщение:\n${message}\n\n${attachments.length > 0 ? `Прикачени файлове: ${attachments.length} file(s)\n` : ''}---\nThis email was sent from the Metalstroy website contact form.`,
             attachments
           };
           await transporter.sendMail(mailOptions);
@@ -54,21 +54,21 @@ function setupEmailApi(env: Record<string, string>): Plugin {
 }
 
 export default defineConfig(({ mode }) => {
-    const env = loadEnv(mode, '.', '');
-    return {
-      server: {
-        port: 3001,
-        host: '0.0.0.0',
-      },
-      plugins: [react(), setupEmailApi(env)],
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '.'),
-        }
+  const env = loadEnv(mode, '.', '');
+  return {
+    server: {
+      port: 3001,
+      host: '0.0.0.0',
+    },
+    plugins: [react(), setupEmailApi(env)],
+    define: {
+      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
       }
-    };
+    }
+  };
 });
