@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 
 import { Services } from './components/Services';
+import { Milestones } from './components/Milestones';
 import { Constructions } from './components/Constructions';
 import { Certificates } from './components/Certificates';
 import { Contact } from './components/Contact';
@@ -77,6 +78,7 @@ function App() {
           <Hero />
 
           <Services />
+          <Milestones />
           <Constructions />
           <Certificates />
         </main>
