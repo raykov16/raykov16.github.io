@@ -55,14 +55,18 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white shadow-sm py-2' : 'bg-transparent py-3'
         }`}
       aria-label={language === 'en' ? 'Main navigation - Metalstroi' : 'Главна навигация – Металстрой'}
     >
       <div className="w-full px-4 sm:px-6 md:px-12 lg:px-24 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className={`text-xl sm:text-2xl font-serif font-semibold tracking-widest uppercase ${isScrolled ? 'text-corporate-dark' : 'text-white'}`} title={language === 'en' ? 'Metalstroi Stoyanov and Georgiev - Metal constructions' : 'Металстрой Стоянов и Георгиев – Метални конструкции'}>
-          {t.nav.logo}
+        <a href="#" className="flex items-center" title={language === 'en' ? 'Metalstroi Stoyanov and Georgiev - Metal constructions' : 'Металстрой Стоянов и Георгиев – Метални конструкции'}>
+          <img
+            src={isScrolled ? "/images/25-metalstroy-dark.png" : "/images/25-metalstroy-light.png"}
+            alt="Metalstroy Logo"
+            className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-opacity duration-300"
+          />
         </a>
 
         {/* Desktop Nav */}
@@ -86,11 +90,10 @@ export const Navbar: React.FC = () => {
           {/* Language Toggle - Desktop */}
           <button
             onClick={toggleLanguage}
-            className={`flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest transition-all duration-300 border rounded-full px-3 py-1.5 ml-2 ${
-              isScrolled
-                ? 'text-corporate-dark border-corporate-dark/30 hover:bg-corporate-dark hover:text-white'
-                : 'text-white border-white/40 hover:bg-white hover:text-corporate-dark'
-            }`}
+            className={`flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest transition-all duration-300 border rounded-full px-3 py-1.5 ml-2 ${isScrolled
+              ? 'text-corporate-dark border-corporate-dark/30 hover:bg-corporate-dark hover:text-white'
+              : 'text-white border-white/40 hover:bg-white hover:text-corporate-dark'
+              }`}
             title={language === 'bg' ? 'Switch to English' : 'Превключи на Български'}
           >
             <Globe size={14} />
@@ -103,11 +106,10 @@ export const Navbar: React.FC = () => {
           {/* Language Toggle - Mobile */}
           <button
             onClick={toggleLanguage}
-            className={`flex items-center gap-1 text-xs font-bold uppercase tracking-wider transition-all duration-300 border rounded-full px-2.5 py-1 ${
-              isScrolled
-                ? 'text-corporate-dark border-corporate-dark/30 hover:bg-corporate-dark hover:text-white'
-                : 'text-white border-white/40 hover:bg-white hover:text-corporate-dark'
-            }`}
+            className={`flex items-center gap-1 text-xs font-bold uppercase tracking-wider transition-all duration-300 border rounded-full px-2.5 py-1 ${isScrolled
+              ? 'text-corporate-dark border-corporate-dark/30 hover:bg-corporate-dark hover:text-white'
+              : 'text-white border-white/40 hover:bg-white hover:text-corporate-dark'
+              }`}
           >
             <Globe size={12} />
             {language === 'bg' ? 'EN' : 'BG'}
