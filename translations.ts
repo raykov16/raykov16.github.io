@@ -63,6 +63,13 @@ export interface Translations {
     privacyPolicy: string;
     termsOfUse: string;
   };
+  // Milestones
+  milestones: {
+    items: {
+      number: string;
+      text: string;
+    }[];
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -136,7 +143,7 @@ export const translations: Record<Language, Translations> = {
     },
     constructions: {
       sectionLabel: 'Обекти',
-      sectionTitle: 'Над 100 доволни клиенти',
+      sectionTitle: 'Над 100 завършени обекти',
       showMore: 'Разгледай още обекти',
       showLess: 'Скрий обектите',
       items: [
@@ -192,6 +199,14 @@ export const translations: Record<Language, Translations> = {
       copyright: `© ${new Date().getFullYear()} METALSTROY. Всички права запазени.`,
       privacyPolicy: 'Политика за поверителност',
       termsOfUse: 'Условия за ползване',
+    },
+    milestones: {
+      items: [
+        { number: '9000+', text: 'КВ МЕТРА\nПОКРИТИ ПЛОЩИ' },
+        { number: '200+', text: 'ТОНА ПРОИЗВОДСТВЕН\nКАПАЦИТЕТ ГОДИШНО' },
+        { number: '100+', text: 'ДОВОЛНИ КЛИЕНТИ' },
+        { number: '25+', text: 'ГОДИНИ\nОПИТ' },
+      ],
     },
   },
   en: {
@@ -264,7 +279,7 @@ export const translations: Record<Language, Translations> = {
     },
     constructions: {
       sectionLabel: 'Constructions',
-      sectionTitle: 'Over 100 happy clients',
+      sectionTitle: 'Over 100 finished constructions',
       showMore: 'View more constructions',
       showLess: 'Hide constructions',
       items: [
@@ -320,6 +335,14 @@ export const translations: Record<Language, Translations> = {
       copyright: `© ${new Date().getFullYear()} Metalstroi. All rights reserved.`,
       privacyPolicy: 'Privacy Policy',
       termsOfUse: 'Terms of Use',
+    },
+    milestones: {
+      items: [
+        { number: '9000+', text: 'SQ METERS\nCOVERED AREA' },
+        { number: '200+', text: 'TONS OF PRODUCTION\nCAPACITY PER YEAR' },
+        { number: '100+', text: 'HAPPY CLIENTS' },
+        { number: '25+', text: 'YEARS\nEXPERIENCE' },
+      ],
     },
   },
 };
