@@ -3,21 +3,21 @@ import { Button } from './ui/Button';
 import { useLanguage } from '../LanguageContext';
 
 const constructionImages = [
-  "../images/leten-teatur.png",
-  "../images/kozirka-stadion.png",
-  "../images/kushta-barselona.png",
+  "/images/leten-teatur.png",
+  "/images/kozirka-stadion.png",
+  "/images/kushta-barselona.png",
 ];
 
 const moreConstructionImages = [
-  "../images/skladova-sgrada.png",
-  "../images/ACT-mivka.png",
-  "../images/pokrivno-pokritie.png",
-  "../images/bila.png",
-  "../images/silozna-baza.png",
-  "../images/naves-avtomobili.png",
-  "../images/retail-park.png",
-  "../images/parking.png",
-  "../images/tunel-parking.png",
+  "/images/skladova-sgrada.png",
+  "/images/ACT-mivka.png",
+  "/images/pokrivno-pokritie.png",
+  "/images/bila.png",
+  "/images/silozna-baza.png",
+  "/images/naves-avtomobili.png",
+  "/images/retail-park.png",
+  "/images/parking.png",
+  "/images/tunel-parking.png",
 ];
 
 interface CardProps {

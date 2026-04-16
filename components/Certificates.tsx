@@ -17,9 +17,9 @@ interface EuroProgram {
 
 const certificateCodes = ["ISO 3834-2", "ISO 1090-2", "ISO 9001"];
 const certificateImages = [
-  "../images/3834-2CERT.png",
-  "../images/1090-2CERT.png",
-  "../images/9001CERT.png",
+  "/images/3834-2CERT.png",
+  "/images/1090-2CERT.png",
+  "/images/9001CERT.png",
 ];
 
 export const Certificates: React.FC = () => {
@@ -36,7 +36,7 @@ export const Certificates: React.FC = () => {
   const euroPrograms: EuroProgram[] = t.certificates.euroPrograms.map((prog) => ({
     code: prog.code,
     label: t.certificates.euroLabel,
-    image: "../images/euro-flag.png",
+    image: "/images/euro-flag.png",
     description: prog.description,
   }));
 
@@ -63,7 +63,7 @@ export const Certificates: React.FC = () => {
             >
               <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <div className="w-16 h-16 bg-[#001fd2] rounded-2xl flex items-center justify-center text-corporate-dark overflow-hidden">
-                  <img src="../images/TUV.png" alt="TUV certification - Металстрой" className="w-full h-full object-cover" loading="lazy" />
+                  <img src="/images/TUV.png" alt="TUV certification - Металстрой" className="w-full h-full object-cover" loading="lazy" />
                 </div>
               </div>
               <div>
@@ -83,7 +83,7 @@ export const Certificates: React.FC = () => {
             >
               <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                 <div className="w-16 h-16 bg-[#003399] rounded-2xl flex items-center justify-center text-corporate-dark overflow-hidden">
-                  <img src="../images/euro-flag.png" alt="European Program - Металстрой Стоянов и Георгиев" className="w-full h-full object-cover" loading="lazy" />
+                  <img src="/images/euro-flag.png" alt="European Program - Металстрой Стоянов и Георгиев" className="w-full h-full object-cover" loading="lazy" />
                 </div>
               </div>
               <div>

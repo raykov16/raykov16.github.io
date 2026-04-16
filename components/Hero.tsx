@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button } from './ui/Button';
-import heroBg from '../images/LandingPageZavarchik.png';
-import heroBgMobile from '../images/LandingPageVerticalZavarchik.png';
-import logoWhite from '../images/logo-metalstroi-white.png';
+const heroBg = '/images/LandingPageZavarchik.png';
+const heroBgMobile = '/images/LandingPageVerticalZavarchik.png';
+const logoWhite = '/images/logo-metalstroi-white.png';
 import { useLanguage } from '../LanguageContext';
 
 export const Hero: React.FC = () => {

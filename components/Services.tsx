@@ -2,10 +2,10 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 
 const serviceImages = [
-  "../images/proizvodstvo.png",
-  "../images/montajni-sredstva.png",
-  "../images/predimstva.png",
-  "../images/prilojenie.png",
+  "/images/proizvodstvo.png",
+  "/images/montajni-sredstva.png",
+  "/images/predimstva.png",
+  "/images/prilojenie.png",
 ];
 
 export const Services: React.FC = () => {
