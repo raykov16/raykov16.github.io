@@ -15,10 +15,10 @@ interface EuroProgram {
   description: string;
 }
 
-const certificateCodes = ["ISO 3834-2", "ISO 1090-2", "ISO 9001"];
+const certificateCodes = ["ISO 1090-2", "ISO 3834-2", "ISO 9001"];
 const certificateImages = [
-  "/images/3834-2CERT.png",
   "/images/1090-2CERT.png",
+  "/images/3834-2CERT.png",
   "/images/9001CERT.png",
 ];
 
