@@ -54,6 +54,21 @@ export const Certificates: React.FC = () => {
           <div className="section-header-divider"></div>
         </div>
 
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 md:gap-20 lg:gap-24 mb-12 sm:mb-16 md:mb-20">
+          <img
+            src="/images/asociacia-na-konstrukciite.png"
+            alt="Association of Construction Metal Structures - Metalstroi"
+            className="h-10 sm:h-12 md:h-16 lg:h-20 xl:h-24 2xl:h-32 w-auto object-contain transition-all duration-500"
+            loading="lazy"
+          />
+          <img
+            src="/images/kamara-na-stroitelite.png"
+            alt="Chamber of Builders in Bulgaria - Metalstroi"
+            className="h-10 sm:h-12 md:h-16 lg:h-20 xl:h-24 2xl:h-32 w-auto object-contain transition-all duration-500"
+            loading="lazy"
+          />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {certificates.map((cert, idx) => (
             <div
