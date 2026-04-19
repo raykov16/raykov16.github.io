@@ -54,14 +54,14 @@ export const Certificates: React.FC = () => {
           <div className="section-header-divider"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {certificates.map((cert, idx) => (
             <div
               key={idx}
               onClick={() => openCertificate(cert)}
-              className="bg-white rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center shadow-sm hover:shadow-md transition-shadow border border-gray-100 cursor-pointer"
+              className="bg-white rounded-2xl p-6 flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left md:flex-col md:items-center md:text-center xl:flex-row xl:items-center xl:text-left shadow-sm hover:shadow-md transition-shadow border border-gray-100 cursor-pointer h-full"
             >
-              <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
+              <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6 md:mb-4 md:mr-0 xl:mb-0 xl:mr-6">
                 <div className="w-16 h-16 bg-[#001fd2] rounded-2xl flex items-center justify-center text-corporate-dark overflow-hidden">
                   <img src="/images/TUV.png" alt="TUV certification - Металстрой" className="w-full h-full object-cover" loading="lazy" />
                 </div>
@@ -74,14 +74,14 @@ export const Certificates: React.FC = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto mt-12">
           {euroPrograms.map((prog, idx) => (
             <div
               key={idx}
               onClick={() => openEuroProgram(prog)}
-              className="bg-white rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center shadow-sm hover:shadow-md transition-shadow border border-gray-100 cursor-pointer"
+              className="bg-white rounded-2xl p-6 flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left md:flex-col md:items-center md:text-center xl:flex-row xl:items-center xl:text-left shadow-sm hover:shadow-md transition-shadow border border-gray-100 cursor-pointer h-full"
             >
-              <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
+              <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6 md:mb-4 md:mr-0 xl:mb-0 xl:mr-6">
                 <div className="w-16 h-16 bg-[#003399] rounded-2xl flex items-center justify-center text-corporate-dark overflow-hidden">
                   <img src="/images/euro-flag.png" alt="European Program - Металстрой Стоянов и Георгиев" className="w-full h-full object-cover" loading="lazy" />
                 </div>
