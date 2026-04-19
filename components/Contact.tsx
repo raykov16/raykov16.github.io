@@ -127,7 +127,7 @@ export const Contact: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white/5 p-6 sm:p-8 md:p-12 border border-white/10 rounded-2xl">
+        <div id="contact-form" className="bg-white/5 p-6 sm:p-8 md:p-12 border border-white/10 rounded-2xl scroll-mt-24">
           <h3 className="text-2xl sm:text-3xl font-serif text-center text-white mb-6 sm:mb-8">{t.contact.formTitle}</h3>
 
           {isSuccess ? (

@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
             {t.hero.titleLine2}
           </h1>
           <div className="flex flex-col flex-wrap sm:flex-row justify-center lg:justify-start gap-4">
-            <Button variant="primary" href="#contact">{t.hero.ctaInquiry}</Button>
+            <Button variant="primary" href="#contact-form">{t.hero.ctaInquiry}</Button>
             <Button variant="secondary-dark" href="#constructions">{t.hero.ctaProjects}</Button>
           </div>
         </div>
