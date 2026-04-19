@@ -202,10 +202,10 @@ export const translations: Record<Language, Translations> = {
     },
     milestones: {
       items: [
-        { number: '9000+', text: 'КВ МЕТРА\nПОКРИТИ ПЛОЩИ' },
-        { number: '200+', text: 'ТОНА ПРОИЗВОДСТВЕН\nКАПАЦИТЕТ ГОДИШНО' },
-        { number: '100+', text: 'ДОВОЛНИ КЛИЕНТИ' },
-        { number: '25+', text: 'ГОДИНИ\nОПИТ' },
+        { number: '9000+', text: 'КВ МЕТРА\nЗАСТРОЕНА ПЛОЩ' },
+        { number: '2000+', text: 'ТОНА ПРОИЗВОДСТВЕН\nКАПАЦИТЕТ ГОДИШНО' },
+        { number: '1000+', text: 'ДОВОЛНИ КЛИЕНТИ' },
+        { number: '25+', text: 'ГОДИНИ ОПИТ' },
       ],
     },
   },
@@ -338,10 +338,10 @@ export const translations: Record<Language, Translations> = {
     },
     milestones: {
       items: [
-        { number: '9000+', text: 'SQ METERS\nCOVERED AREA' },
-        { number: '200+', text: 'TONS OF PRODUCTION\nCAPACITY PER YEAR' },
-        { number: '100+', text: 'HAPPY CLIENTS' },
-        { number: '25+', text: 'YEARS\nEXPERIENCE' },
+        { number: '9000+', text: 'SQUARE METERS\nBUILT-UP AREA' },
+        { number: '2000+', text: 'TONS OF PRODUCTION\nCAPACITY PER YEAR' },
+        { number: '1000+', text: 'HAPPY CLIENTS' },
+        { number: '25+', text: 'YEARS EXPERIENCE' },
       ],
     },
   },
