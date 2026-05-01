@@ -97,20 +97,18 @@ export const translations: Record<Language, Translations> = {
         {
           title: 'Производство с качество и професионализъм',
           description: [
-            '<strong class="block font-semibold">Подготовка на материалите:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>Автоматизирана линия за дробеструйно почистване на профили и листов материал</li></ul>',
-            '<strong class="block font-semibold">Рязане и обработка:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>20 kW лазер за рязане на листов материал с работна зона 14 м × 3 м и 3D режеща глава</li><li>6 kW лазер за рязане на листов материал</li><li>Тръбен лазер за автоматизирано рязане и безотпадъчна обработка</li><li>CNC пробивни машини</li><li>Плазмено и газокислородно рязане</li></ul>',
-            '<strong class="block font-semibold">Заваряване и сглобяване:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>Автоматизиран заваръчен робот</li><li>Комбинирана автоматизирана линия за събиране, подфлюсово заваряване и изправяне на съставни профили</li></ul>',
-            '<strong class="block font-semibold">Специализирани линии:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>Автоматична линия за лазерно рязане на стоманени двойно Т-профили</li></ul>',
+            '<strong class="block font-semibold">Подготовка на материалите:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>Автоматизирана линия за дробеструйно почистване на профили и листов материал</li></ul>',
+            '<strong class="block font-semibold">Рязане и обработка:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>20 kW лазер за рязане на листов материал с работна зона 14 м × 3 м и 3D режеща глава</li><li>6 kW лазер за рязане на листов материал</li><li>Тръбен лазер за автоматизирано рязане и безотпадъчна обработка</li><li>CNC пробивни машини</li><li>Плазмено и газокислородно рязане</li></ul>',
+            '<strong class="block font-semibold">Заваряване и сглобяване:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>Автоматизиран заваръчен робот</li><li>Комбинирана автоматизирана линия за събиране, подфлюсово заваряване и изправяне на съставни профили</li></ul>',
+            '<strong class="block font-semibold">Специализирани линии:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>Автоматична линия за лазерно рязане на стоманени двойно Т-профили</li></ul>',
           ],
         },
         {
           title: 'Механизация',
           description: [
-            '<strong class="block font-semibold">Подемна техника:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>9 бр. автовишки</li><li>4 бр. автокранове</li></ul>',
-            '<strong class="block font-semibold">Високоефективна техника за монтаж и работа на височина.</strong>',
-            '<strong class="block font-semibold">Транспортна техника:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>Бордови камион (8 м)</li><li>Влекач с полуремарке</li><li>Разтегателна платформа (21 м)</li></ul>',
-            '<strong class="block font-semibold">Надежден транспорт за стандартни и извънгабаритни товари.</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>Специализирана техника</li><li>Платформа за транспорт на механизация</li></ul>',
-            '<strong class="block font-semibold">Сигурно преместване на тежка и строителна техника.</strong>',
+            '<strong class="block font-semibold">Подемна техника:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>9 бр. автовишки</li><li>4 бр. автокранове</li></ul><div class="mt-2">Високоефективна техника за монтаж и работа на височина.</div>',
+            '<strong class="block font-semibold">Транспортна техника:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>Бордови камион (8 м)</li><li>Влекач с полуремарке</li><li>Разтегателна платформа (21 м)</li></ul><div class="mt-2">Надежден транспорт за стандартни и извънгабаритни товари.</div>',
+            '<strong class="block font-semibold">Специализирана техника:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>Платформа за транспорт на механизация</li></ul><div class="mt-2">Сигурно преместване на тежка и строителна техника.</div>',
           ],
         },
         {
@@ -145,7 +143,7 @@ export const translations: Record<Language, Translations> = {
     },
     constructions: {
       sectionLabel: 'Обекти',
-      sectionTitle: 'Над 100 завършени обекти',
+      sectionTitle: 'Над 1000 завършени обекти',
       showMore: 'Разгледай още обекти',
       showLess: 'Скрий обектите',
       items: [
@@ -235,20 +233,18 @@ export const translations: Record<Language, Translations> = {
         {
           title: 'Production with Quality and Professionalism',
           description: [
-            '<strong class="block font-semibold">Material Preparation:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>Automated line for shot blasting of profiles and sheet material</li></ul>',
-            '<strong class="block font-semibold">Cutting and Processing:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>20 kW laser for cutting sheet material with a 14m x 3m working area and 3D cutting head</li><li>6 kW laser for cutting sheet material</li><li>Tube laser for automated cutting and waste-free processing</li><li>CNC drilling machines</li><li>Plasma and oxy-fuel cutting</li></ul>',
-            '<strong class="block font-semibold">Welding and Assembly:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>Automated welding robot</li><li>Combined automated line for assembly, welding, and straightening of composite profiles</li></ul>',
-            '<strong class="block font-semibold">Specialized Lines:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>Automatic line for laser cutting of steel double T-profiles</li></ul>',
+            '<strong class="block font-semibold">Material Preparation:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>Automated line for shot blasting of profiles and sheet material</li></ul>',
+            '<strong class="block font-semibold">Cutting and Processing:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>20 kW laser for cutting sheet material with a 14m x 3m working area and 3D cutting head</li><li>6 kW laser for cutting sheet material</li><li>Tube laser for automated cutting and waste-free processing</li><li>CNC drilling machines</li><li>Plasma and oxy-fuel cutting</li></ul>',
+            '<strong class="block font-semibold">Welding and Assembly:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>Automated welding robot</li><li>Combined automated line for assembly, welding, and straightening of composite profiles</li></ul>',
+            '<strong class="block font-semibold">Specialized Lines:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>Automatic line for laser cutting of steel double T-profiles</li></ul>',
           ],
         },
         {
           title: 'Mechanization',
           description: [
-            '<strong class="block font-semibold">Lifting Equipment:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>9 aerial work platforms</li><li>4 mobile cranes</li></ul>',
-            '<strong class="block font-semibold">High-efficiency equipment for assembly and work at heights.</strong>',
-            '<strong class="block font-semibold">Transport Equipment:</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>Flatbed truck (8m)</li><li>Tractor with semi-trailer</li><li>Extendable platform (21m)</li></ul>',
-            '<strong class="block font-semibold">Reliable transport for standard and oversized cargo.</strong><ul class="list-[circle] pl-5 mt-2 space-y-1"><li>Specialized equipment</li><li>Platform for transporting machinery</li></ul>',
-            '<strong class="block font-semibold">Safe moving of heavy and construction equipment.</strong>',
+            '<strong class="block font-semibold">Lifting Equipment:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>9 aerial work platforms</li><li>4 mobile cranes</li></ul><div class="mt-2">High-efficiency equipment for assembly and work at heights.</div>',
+            '<strong class="block font-semibold">Transport Equipment:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>Flatbed truck (8m)</li><li>Tractor with semi-trailer</li><li>Extendable platform (21m)</li></ul><div class="mt-2">Reliable transport for standard and oversized cargo.</div>',
+            '<strong class="block font-semibold">Specialized Equipment:</strong><ul class="list-[\'□_\'] pl-5 mt-2 space-y-1"><li>Platform for transporting machinery</li></ul><div class="mt-2">Safe moving of heavy and construction equipment.</div>',
           ],
         },
         {
@@ -283,7 +279,7 @@ export const translations: Record<Language, Translations> = {
     },
     constructions: {
       sectionLabel: 'Constructions',
-      sectionTitle: 'Over 100 finished constructions',
+      sectionTitle: 'Over 1000 finished constructions',
       showMore: 'View more constructions',
       showLess: 'Hide constructions',
       items: [
