@@ -11,9 +11,9 @@ const navItemDefs: NavItemDef[] = [
   { labelKey: 'home', href: '#home' },
   { labelKey: 'services', href: '#services' },
   { labelKey: 'constructions', href: '#constructions' },
+  { labelKey: 'aboutUs', href: '#about-us' },
   { labelKey: 'certificates', href: '#certificates' },
   { labelKey: 'contact', href: '#contact' },
-  { labelKey: 'aboutUs', href: '#about-us' },
 ];
 
 export const Navbar: React.FC = () => {
