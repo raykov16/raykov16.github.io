@@ -63,6 +63,16 @@ export interface Translations {
     privacyPolicy: string;
     termsOfUse: string;
   };
+  // About Us
+  aboutUs: {
+    heading: string;
+    companyName: string;
+    intro: string;
+    experience: string;
+    qualityRule: string;
+    missionPrefix: string;
+    mission: string;
+  };
   // Milestones
   milestones: {
     items: {
@@ -200,6 +210,15 @@ export const translations: Record<Language, Translations> = {
       privacyPolicy: 'Политика за поверителност',
       termsOfUse: 'Условия за ползване',
     },
+    aboutUs: {
+      heading: 'ЗА НАС',
+      companyName: '„METAЛСТРОЙ СТОЯНОВ И ГЕОРГИЕВ“ ООД',
+      intro: ' е фирма, специализирана в проектирането и изграждането на метални конструкции, подходящи за промишлени, търговски, административни и селскостопански сгради.',
+      experience: 'Хилядите реализирани от нас проекти от създаването ни през далечната 2002 г., както и дългосрочните ни партньорски отношения с нашите клиенти, са доказателство за безспирното ни усъвършенстване във всяко едно отношение. Осъществяваме дейност в България, Европа и на Балканския полуостров.',
+      qualityRule: 'Главното правило за нас е „КАЧЕСТВОТО ОПРЕДЕЛЯ ПРОДАЖБАТА“!',
+      missionPrefix: 'Ние от ',
+      mission: ' вярваме в устойчивото и успешното бизнес развитие. Още от създаването на компанията ние следваме водещите принципи, определящи мисията ни, а именно „качествено изпълнение, доверие, партньорство и професионализъм, спомагащи за осъществяването и на най-смелите идеи и проекти на нашите клиенти“.',
+    },
     milestones: {
       items: [
         { number: '9000+', text: 'КВ МЕТРА\nЗАСТРОЕНА ПЛОЩ' },
@@ -335,6 +354,15 @@ export const translations: Record<Language, Translations> = {
       copyright: `© ${new Date().getFullYear()} Metalstroi. All rights reserved.`,
       privacyPolicy: 'Privacy Policy',
       termsOfUse: 'Terms of Use',
+    },
+    aboutUs: {
+      heading: 'ABOUT US',
+      companyName: '“METALSTROY STOYANOV AND GEORGIEV” OOD',
+      intro: ' is a company specialized in the design and construction of metal structures suitable for industrial, commercial, administrative, and agricultural buildings.',
+      experience: 'The thousands of projects we have completed since our establishment back in 2002, as well as our long-term partnerships with our clients, are proof of our continuous improvement in every respect. We operate in Bulgaria, Europe, and the Balkan Peninsula.',
+      qualityRule: 'Our main rule is “QUALITY DETERMINES THE SALE”!',
+      missionPrefix: 'We at ',
+      mission: ' believe in sustainable and successful business development. Since the company was founded, we have followed the leading principles that define our mission, namely “quality execution, trust, partnership, and professionalism, helping to bring even our clients’ boldest ideas and projects to life.”',
     },
     milestones: {
       items: [
