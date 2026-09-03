@@ -15,7 +15,7 @@ export const AboutUs: React.FC = () => {
             {t.nav.aboutUs}
           </h2>
           <p className="text-4xl font-serif sm:text-5xl md:text-6xl">
-            ABOUT US
+            {t.aboutUs.heading}
           </p>
         </div>
       </div>
@@ -23,9 +23,8 @@ export const AboutUs: React.FC = () => {
       {/* Company video */}
       <div className="relative h-screen min-h-screen w-full overflow-hidden">
         <video
-          className="absolute inset-0 block h-full w-full object-cover"
+          className="pointer-events-none absolute inset-0 block h-full w-full object-cover"
           src="/videos/MetalstroyShort1.mp4"
-          controls
           autoPlay
           muted
           loop
@@ -41,16 +40,28 @@ export const AboutUs: React.FC = () => {
       {/* About Us text */}
       <div className="min-h-screen bg-gray-50 text-corporate-dark flex items-center py-20 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 md:px-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed font-light">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              posuere, ipsum at tincidunt consequat, justo libero gravida
-              lectus, vitae tincidunt nibh nisl at erat. Curabitur sed
-              ullamcorper magna. Donec non sem vel arcu facilisis consequat.
-              Suspendisse potenti. Mauris euismod, nisl at consequat
-              ullamcorper, justo lorem malesuada justo, vitae posuere risus
-              lectus vitae libero.
-            </p>
+          <div className="mx-auto max-w-6xl text-center">
+            <h3 className="text-xl font-extrabold leading-tight tracking-wide text-corporate-dark sm:text-2xl md:text-3xl">
+              {t.aboutUs.qualityRule}
+            </h3>
+            <div className="mt-10 grid gap-8">
+              <div className="text-base leading-relaxed text-gray-600 font-light sm:text-lg md:text-xl">
+                <p>
+                  <strong className="font-semibold">{t.aboutUs.companyName}</strong>
+                  {t.aboutUs.intro}
+                </p>
+              </div>
+              <div className="text-base leading-relaxed text-gray-600 font-light sm:text-lg md:text-xl">
+                <p>{t.aboutUs.experience}</p>
+              </div>
+              <div className="text-base leading-relaxed text-gray-600 font-light sm:text-lg md:text-xl">
+                <p>
+                  {t.aboutUs.missionPrefix}
+                  <strong className="font-semibold">{t.aboutUs.companyName}</strong>
+                  {t.aboutUs.mission}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
