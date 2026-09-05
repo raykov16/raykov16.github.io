@@ -35,13 +35,27 @@ export const AboutUs: React.FC = () => {
             ? 'Your browser does not support video playback.'
             : 'Вашият браузър не поддържа възпроизвеждане на видео.'}
         </video>
+        <div className="absolute inset-x-0 bottom-6 z-10 flex justify-center sm:bottom-10">
+          <a
+            href="https://www.youtube.com/watch?v=VIDEO_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-white transition-opacity duration-300 hover:opacity-80"
+          >
+            <img
+              src="/images/ytlogo2.png"
+              alt="YouTube"
+              className="h-16 w-56 object-cover object-center sm:h-16 sm:w-64"
+            />
+          </a>
+        </div>
       </div>
 
       {/* About Us text */}
       <div className="min-h-screen bg-gray-50 text-corporate-dark flex items-center py-20 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 md:px-12">
           <div className="mx-auto max-w-6xl text-center">
-            <h3 className="text-xl font-extrabold leading-tight tracking-wide text-corporate-dark sm:text-2xl md:text-3xl">
+            <h3 className="text-xl font-extrabold leading-tight tracking-wide text-corporate-dark sm:text-2xl md:text-3xl xl:whitespace-nowrap xl:text-2xl">
               {t.aboutUs.qualityRule}
             </h3>
             <div className="mt-10 grid gap-8">
