@@ -55,7 +55,7 @@ export const AboutUs: React.FC = () => {
       <div className="min-h-screen bg-gray-50 text-corporate-dark flex items-center py-20 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 md:px-12">
           <div className="mx-auto max-w-6xl text-center">
-            <h3 className="text-xl font-extrabold leading-tight tracking-wide text-corporate-dark sm:text-2xl md:text-3xl">
+            <h3 className="text-xl font-extrabold leading-tight tracking-wide text-corporate-dark sm:text-2xl md:text-3xl xl:whitespace-nowrap xl:text-2xl">
               {t.aboutUs.qualityRule}
             </h3>
             <div className="mt-10 grid gap-8">
