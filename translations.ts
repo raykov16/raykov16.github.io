@@ -221,7 +221,6 @@ export const translations: Record<Language, Translations> = {
     },
     milestones: {
       items: [
-        { number: '9000+', text: 'КВ МЕТРА\nЗАСТРОЕНА ПЛОЩ' },
         { number: '2000+', text: 'ТОНА ПРОИЗВОДСТВЕН\nКАПАЦИТЕТ ГОДИШНО' },
         { number: '1000+', text: 'ДОВОЛНИ КЛИЕНТИ' },
         { number: '25+', text: 'ГОДИНИ ОПИТ' },
@@ -366,7 +365,6 @@ export const translations: Record<Language, Translations> = {
     },
     milestones: {
       items: [
-        { number: '9000+', text: 'SQUARE METERS\nBUILT-UP AREA' },
         { number: '2000+', text: 'TONS OF PRODUCTION\nCAPACITY PER YEAR' },
         { number: '1000+', text: 'HAPPY CLIENTS' },
         { number: '25+', text: 'YEARS EXPERIENCE' },

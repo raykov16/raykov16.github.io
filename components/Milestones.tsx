@@ -68,9 +68,14 @@ export const Milestones: React.FC = () => {
 
   return (
     <section className="bg-[#8F0E2A] w-full py-12 md:py-16">
-      <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-12 xl:gap-16 justify-items-center">
+      <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 xl:gap-16 justify-items-center">
         {t.milestones.items.map((item, index) => (
-          <div key={index} className="flex flex-row items-center gap-2 md:gap-3 text-gray-200">
+          <div
+            key={index}
+            className={`flex flex-row items-center gap-2 md:gap-3 text-gray-200 ${
+              index === t.milestones.items.length - 1 ? 'sm:col-span-2 xl:col-span-1' : ''
+            }`}
+          >
             <div
               className="text-5xl md:text-6xl tracking-tight leading-none"
               style={{ fontFamily: "'Impact', 'Arial Black', sans-serif", WebkitTextStroke: "2px rgba(0,0,0,0.4)" }}
