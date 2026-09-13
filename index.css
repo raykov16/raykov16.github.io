@@ -41,3 +41,47 @@
         margin-bottom: 1rem;
         border: 2px solid #ce153a;
     }
+
+    .service-sublist {
+        list-style: none;
+        padding-left: 1.25rem;
+    }
+
+    .service-sublist > li {
+        position: relative;
+    }
+
+    .service-sublist > li,
+    .service-list--house-markers > li {
+        padding-left: 0.3rem;
+    }
+
+    .service-sublist > li::before {
+        content: '';
+        position: absolute;
+        width: 1.1rem;
+        height: 0.68rem;
+        left: -1.25rem;
+        top: 0.8125em;
+        transform: translateY(-50%);
+        background: url('/images/bullet-kushta.png') center / contain no-repeat;
+    }
+
+    .service-list--house-markers > li {
+        position: relative;
+    }
+
+    .service-list--house-markers > li::before {
+        content: '';
+        position: absolute;
+        width: 1.1rem;
+        height: 0.68rem;
+        left: -1.25rem;
+        top: 0.8125em;
+        transform: translateY(-50%);
+        background: url('/images/bullet-kushta.png') center / contain no-repeat;
+    }
+
+    .service-list--house-markers {
+        margin-left: 1.25rem;
+    }

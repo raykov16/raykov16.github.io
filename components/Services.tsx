@@ -40,7 +40,7 @@ export const Services: React.FC = () => {
               {/* Text Side */}
               <div className="w-full lg:w-1/2 text-left flex flex-col justify-center py-2 lg:py-6">
                 <h3 className="text-2xl sm:text-3xl font-serif text-corporate-dark mb-4 sm:mb-6">{service.title}</h3>
-                <ul className="text-gray-600 font-light leading-relaxed text-sm lg:text-[15px] tracking-wide list-disc pl-5 space-y-3">
+                <ul className={`service-list text-gray-600 font-light leading-relaxed text-sm lg:text-[15px] tracking-wide list-none pl-0 space-y-3 ${index >= 2 ? 'service-list--house-markers' : ''}`}>
                   {service.description.map((item, i) => (
                     <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
                   ))}
