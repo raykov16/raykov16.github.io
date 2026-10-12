@@ -37,7 +37,7 @@ export const AboutUs: React.FC = () => {
         </video>
         <div className="absolute inset-x-0 bottom-6 z-10 flex justify-center sm:bottom-10">
           <a
-            href="https://www.youtube.com/watch?v=VIDEO_ID"
+            href="https://www.youtube.com/watch?v=3vIEmOZRrOM&feature=youtu.be"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-white transition-opacity duration-300 hover:opacity-80"
